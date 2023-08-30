@@ -175,6 +175,10 @@ p {
     justify-content: space-between;
 }
 
+.row img {
+    max-width: 100%;
+}
+
 .titulo2-col {
     flex-basis: 31%;
     background: #fff3f3;

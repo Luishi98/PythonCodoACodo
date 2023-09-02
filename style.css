@@ -202,18 +202,6 @@ h3 {
   padding-top: 50px;
 }
 
-ABOUT-col {
-  flex-basis: 32%;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-}
-
-ABOUT-col img {
-  width: 100%;
-}
-
 .location {
   width: 80%;
   margin: auto;

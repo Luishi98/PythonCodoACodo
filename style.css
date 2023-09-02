@@ -268,17 +268,19 @@ padding: 18px 0;
     margin-top: 10px;
     margin-right: 250px;
     margin-left: 100px;
-    background-color: #000000;
+    background-color: #1f2e2d;
     padding-left: 50px;
     padding-bottom: 50px;
+    padding-right: 50px;
 }
 
 .Fondo{
-    background-image: url(images/banner.jpg);
+    background-image: url(images/Site-background-dark_2.JPG);
+    background-position: center;
+    background-attachment:fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100vh;
-    color: #fff;
-
+    background-size:cover;
+    color: orange;
 }
 
 body p{
@@ -296,6 +298,7 @@ strong{
     padding-bottom: 15px;
     border: 2px solid orange;
     width: 250px;
+    color: #fff;
 }
 
 .Titulo_Lista{

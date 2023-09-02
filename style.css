@@ -291,7 +291,7 @@ strong{
     color:grey;
 }
 
-.Sumario{
+.Sumario_Opening{
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 15px;
@@ -310,5 +310,17 @@ strong{
     border-color:gray;
 }
 
+.Canciones_Ending{
+    border-top: 7px black solid;
+}
 
-
+.Sumario_Ending{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid orange;
+    width: 250px;
+    list-style: none;
+    color: #fff;
+}

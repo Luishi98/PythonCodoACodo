@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--site:Google Fonts, tipografia: Montserrat-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="seccion5.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,13 +16,15 @@
     <!-- site: BootstrapCDN-->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-    <title>Sección 4</title>
+    <title> Contacto </title>
 </head>
 
 <body>
+
     <section class="header">
+
         <nav>
-            <a href="index.html"><img src="images/logo.png" /> </a>
+
             <div class="nav-links" id="navlinks">
                 <!--site:fontawesome / X mark icon-->
                 <i class="fa fa-times"></i>
@@ -32,13 +34,23 @@
                     <li><a href="seccion3.html">SERVICES</a></li>
                     <li><a href="seccion4.html">BLOG</a></li>
                     <li><a href="seccion5.html">CONTACTO</a></li>
+                    <!--formulario de contacto por medio de https://formsubmit.co/ hay que levantar la pagina en un server para ejecutar-->
+                    <div class="container">
+                        <form action="https://formsubmit.co/dragonballzblog2023@gmail.com" method="POST" />
+                        <h3> Ponerse en contacto </h3>
+                        <input type="text" name="name" placeholder="yourname" required>
+                        <input type="email" name="email" placeholder="Email id" required>
+                        <input type="text" name="phone" placeholder="phone number" required>
+                        <textarea name="message" row="4" placeholder="como te puedo ayudar?" required></textarea>
+                        <button type="submit"> Send</button>
+                        </form>
+
+                    </div>
                 </ul>
-            </div>
-            <!--site:fontawesome / BARS mark icon-->
-            <i class="fa fa-bars"></i>
 
         </nav>
     </section>
+
 </body>
 
 </html>

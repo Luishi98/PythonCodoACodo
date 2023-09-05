@@ -305,7 +305,7 @@ strong{
     text-align: left;
 }
 
-.Tabla_Opening, tr, th, td{
+.Tabla_Opening_Ending, tr, th, td{
     border-style:solid;
     border-color:gray;
     border-collapse: collapse;
@@ -324,4 +324,9 @@ strong{
     width: 380px;
     list-style: none;
     color: #fff;
+}
+
+.Descripcion_cancion{
+    text-align: left;
+    color: white;
 }

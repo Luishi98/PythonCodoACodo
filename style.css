@@ -264,14 +264,29 @@ padding: 18px 0;
 
 
 /*Mariano*/
+.Container_general{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+
 .Container_Music{
     margin-top: 10px;
     margin-right: 250px;
-    margin-left: 100px;
+    margin-left: 50px;
     background-color: #1f2e2d;
     padding-left: 50px;
     padding-bottom: 50px;
     padding-right: 50px;
+}
+
+.Server_Discord{
+    background-color: #1f2e2d;
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 1000px;
+    height: 250px;
 }
 
 .Fondo{
@@ -329,4 +344,10 @@ strong{
 .Descripcion_cancion{
     text-align: left;
     color: white;
+}
+
+.Titulo_Discord h2{
+    background-color: orange;
+    color: black;
+    padding-bottom: 50px;
 }

@@ -6,21 +6,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/*Barra de navegacion general*/
 .header {
-  background-image: linear-gradient(rgba(59, 59, 59, 0.048), rgba(0, 1, 7, 0.7)),
-    url(images/banner.jpg);
-  min-height: 100vh;
   width: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-nav {
   display: flex;
   padding: 2% 6%;
   justify-content: space space-between;
   align-items: center;
+  background-color: #550000;
+  max-height: 15vh;
 }
 
 nav img {
@@ -59,6 +53,7 @@ nav img {
   width: 100%;
 }
 
+/*Index*/
 .text-box {
   width: 90%;
   color: #fff;
@@ -206,28 +201,103 @@ h3 {
   padding-top: 50px;
 }
 
-/*-----footer------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*Seccion (2) Op&End - Mariano*/
 
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 30px 0;
+.Container_general {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
 }
 
-.footer h4 {
-  margin-bottom: 25px;
-  margin-top: 20px;
-  font-weight: 600;
+.Container_Music {
+  margin-top: 10px;
+  margin-right: 250px;
+  margin-left: 50px;
+  background-color: #1f2e2d;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
 }
 
-.icons .fa {
-  color: #f44336;
-  margin: 0 13px;
-  cursor: pointer;
-  padding: 18px 0;
+.Server_Discord {
+  background-color: #1f2e2d;
+  margin-right: 40px;
+  margin-top: 10px;
+  width: 1000px;
+  height: 250px;
 }
 
-/*Seccion Mangas*/
+.Fondo {
+  background-image: url(images/Site-background-dark_2.JPG);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: orange;
+}
+
+body p {
+  color: #fff;
+}
+
+strong {
+  color: grey;
+}
+
+.Sumario_Opening {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid orange;
+  width: 380px;
+  color: #fff;
+}
+
+.Titulo_Lista {
+  text-align: left;
+}
+
+.Tabla_Opening_Ending,
+tr,
+th,
+td {
+  border-style: solid;
+  border-color: gray;
+  border-collapse: collapse;
+}
+
+.Canciones_Ending {
+  border-top: 7px black solid;
+}
+
+.Sumario_Ending {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border: 2px solid orange;
+  width: 380px;
+  list-style: none;
+  color: #fff;
+}
+
+.Descripcion_cancion {
+  text-align: left;
+  color: white;
+}
+
+.Titulo_Discord h2 {
+  background-color: orange;
+  color: black;
+  padding-bottom: 50px;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Seccion (3) Mangas*/
 
 @font-face {
   font-family: dragonball;
@@ -343,94 +413,83 @@ h3 {
 #mangas__bonton-sigz {
   right: 0px;
 }
-/*Mariano*/
-.Container_general {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-}
 
-.Container_Music {
-  margin-top: 10px;
-  margin-right: 250px;
-  margin-left: 50px;
-  background-color: #1f2e2d;
-  padding-left: 50px;
-  padding-bottom: 50px;
-  padding-right: 50px;
-}
+/*-----------------------------------------------------------------------------------------------------*/
 
-.Server_Discord {
-  background-color: #1f2e2d;
-  margin-right: 40px;
-  margin-top: 10px;
-  width: 1000px;
-  height: 250px;
-}
+/*Seccion (5) Formulario - Gonzalo*/
 
-.Fondo {
-  background-image: url(images/Site-background-dark_2.JPG);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+#formulario {
+  background-image: url(images/fondoformulario.jpg);
   background-size: cover;
-  color: orange;
 }
 
-body p {
+#formulario nav {
+  background: none;
+}
+
+form {
+  background: #fcfcfca8;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 120%;
+  max-width: 600px;
+  border-radius: 30px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form h3 {
+  color: #555;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 10px;
+  outline: none;
+  max-width: 580px;
+  min-width: min-content;
+  max-height: 350px;
+  min-height: 18px;
+  background: #dadada;
+  font-size: 16px;
+  display: flex;
+}
+
+form button {
+  padding: 15px;
+  background: #ff5361;
   color: #fff;
+  font-size: 18;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
 }
 
-strong {
-  color: grey;
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----footer------*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
 }
 
-.Sumario_Opening {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: 2px solid orange;
-  width: 380px;
-  color: #fff;
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
-.Titulo_Lista {
-  text-align: left;
-}
-
-.Tabla_Opening_Ending,
-tr,
-th,
-td {
-  border-style: solid;
-  border-color: gray;
-  border-collapse: collapse;
-}
-
-.Canciones_Ending {
-  border-top: 7px black solid;
-}
-
-.Sumario_Ending {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  border: 2px solid orange;
-  width: 380px;
-  list-style: none;
-  color: #fff;
-}
-
-.Descripcion_cancion {
-  text-align: left;
-  color: white;
-}
-
-.Titulo_Discord h2 {
-  background-color: orange;
-  color: black;
-  padding-bottom: 50px;
+.icons .fa {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
 }

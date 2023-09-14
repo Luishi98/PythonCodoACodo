@@ -12,15 +12,18 @@
     background-image: url(images/fondoformulario.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 2000px;
-    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    
 }
 
 nav {
     display: flex;
-    padding: 2% 15%;
+    padding: 2% 18%;
     justify-content: space space-between;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 nav img {
@@ -131,17 +134,7 @@ nav .fa {
         z-index: 2;
     }
 
-    /* icons hidden sidebar */
-    nav.fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-
-
-    }
-
+  
     .nav-links ul {
         padding: 30px;
 
@@ -206,22 +199,32 @@ flex-direction: column;
 padding: 2vw 4vw;
 width: 120%;
 max-width: 600px;
-border-radius: 20px;
+border-radius: 30px;
+justify-content: center;
+flex-direction: column;
+
 }
 
 form h3{
 color: #555;
 font-weight: 800;
 margin-bottom: 20px;
+
 }
 
 form input, form textarea{
     border: 0;
     margin: 10px 0;
-    padding: 20px;
+    padding: 10px;
     outline: none;
+    max-width: 580px;
+    min-width:min-content;
+    max-height: 350px;
+    min-height: 18px;
    background: #dadada;
    font-size: 16px;
+   display: flex;
+   
 }
 
 form-button{

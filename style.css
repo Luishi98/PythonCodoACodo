@@ -1,9 +1,17 @@
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Montserrat", sans-serif;
+=======
+    margin: 0;
+    /*padding: 0;     Lo comenté para que no me bloquee una propiedad de las listas, esto me estaba afectando el orden*/
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+>>>>>>> Mariano_Bentos
 }
 
 .header {
@@ -163,10 +171,13 @@ p {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .row img {
   max-width: 100%;
 }
 
+=======
+>>>>>>> Mariano_Bentos
 .titulo2-col {
   flex-basis: 31%;
   background: #fff3f3;
@@ -224,11 +235,19 @@ h3 {
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 .icons .fa {
   color: #f44336;
   margin: 0 13px;
   cursor: pointer;
   padding: 18px 0;
+=======
+.icons .fa{
+color:#f44336;
+margin: 0 13px;
+cursor: pointer;
+padding: 18px 0;
+>>>>>>> Mariano_Bentos
 }
 
 /*Seccion Mangas*/
@@ -238,6 +257,7 @@ h3 {
   src: url(/fuentes/Saiyan-Sans.ttf);
 }
 
+<<<<<<< HEAD
 #mangas {
   /*Body*/
   background-image: url(/images/dragonball/namek.png);
@@ -344,4 +364,93 @@ h3 {
 
 #mangas__bonton-sig, #mangas__bonton-sigz {
   right: 0px;
+=======
+/*Mariano*/
+.Container_general{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+
+.Container_Music{
+    margin-top: 10px;
+    margin-right: 250px;
+    margin-left: 50px;
+    background-color: #1f2e2d;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+
+.Server_Discord{
+    background-color: #1f2e2d;
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 1000px;
+    height: 250px;
+}
+
+.Fondo{
+    background-image: url(images/Site-background-dark_2.JPG);
+    background-position: center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: orange;
+}
+
+body p{
+    color: #fff;
+}
+
+strong{
+    color:grey;
+}
+
+.Sumario_Opening{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid orange;
+    width: 380px;
+    color: #fff;
+}
+
+.Titulo_Lista{
+    text-align: left;
+}
+
+.Tabla_Opening_Ending, tr, th, td{
+    border-style:solid;
+    border-color:gray;
+    border-collapse: collapse;
+}
+
+.Canciones_Ending{
+    border-top: 7px black solid;
+}
+
+.Sumario_Ending{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border: 2px solid orange;
+    width: 380px;
+    list-style: none;
+    color: #fff;
+}
+
+.Descripcion_cancion{
+    text-align: left;
+    color: white;
+}
+
+.Titulo_Discord h2{
+    background-color: orange;
+    color: black;
+    padding-bottom: 50px;
+>>>>>>> Mariano_Bentos
 }

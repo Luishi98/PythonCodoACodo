@@ -1,4 +1,5 @@
 /*Seccion Mangas*/
+/*Dragon Ball*/
 const botonAnt = document.getElementById('mangas__bonton-ant');
 const botonSig = document.getElementById('mangas__bonton-sig');
 const track = document.getElementById('track');
@@ -23,6 +24,7 @@ function Mover(value) {
 }
 
 /*Seccion Mangas*/
+/*Dragon Ball Z*/
 const botonAntz = document.getElementById('mangas__bonton-antz');
 const botonSigz = document.getElementById('mangas__bonton-sigz');
 const trackz = document.getElementById('trackz');

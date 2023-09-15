@@ -235,6 +235,7 @@ h3 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: dragonball;
   color: orange;
 }
 
@@ -257,7 +258,13 @@ strong {
 }
 
 .Titulo_Lista {
-  text-align: left;
+  text-align: center;
+  font-family: dragonball;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #fa0011;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .Tabla_Opening_Ending,
@@ -267,10 +274,19 @@ td {
   border-style: solid;
   border-color: gray;
   border-collapse: collapse;
+  font-family: dragonball;
+  font-weight: 100;
 }
 
 .Canciones_Ending {
   border-top: 7px black solid;
+  text-align: center;
+  color: #fa0011;
+  font-size: 3rem;
+  font-family: dragonball;
+  font-weight: 100;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .Sumario_Ending {
@@ -291,8 +307,12 @@ td {
 
 .Titulo_Discord h2 {
   background-color: orange;
-  color: black;
+  color: #fa0011;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-left: 19px;
   padding-bottom: 50px;
+  font-family: dragonball;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/

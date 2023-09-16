@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/    /*--Se podrá quitar este parámetro? Ya que me genera conflicto en las listas y no me deja ordenar correctamente*/
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -211,6 +211,12 @@ h3 {
   align-content: stretch;
 }
 
+.Container_Music h2{
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 .Container_Music {
   margin-top: 10px;
   margin-right: 250px;
@@ -219,14 +225,6 @@ h3 {
   padding-left: 50px;
   padding-bottom: 50px;
   padding-right: 50px;
-}
-
-.Server_Discord {
-  background-color: #1f2e2d;
-  margin-right: 40px;
-  margin-top: 10px;
-  width: 1000px;
-  height: 250px;
 }
 
 .Fondo {
@@ -241,6 +239,9 @@ h3 {
 
 body p {
   color: #fff;
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 strong {
@@ -255,6 +256,9 @@ strong {
   border: 2px solid orange;
   width: 380px;
   color: #fff;
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .Titulo_Lista {
@@ -267,7 +271,6 @@ strong {
     1px 1px 0 #000;
 }
 
-/*Probé la fuente de letra, si queda, hay que colocarla en la opening*/
 .Tabla_Opening_Ending,
 tr,
 th,
@@ -276,7 +279,9 @@ td {
   border-color: gray;
   border-collapse: collapse;
   font-family: dragonball;
-  font-weight: 100;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-weight: 200;
 }
 
 .Canciones_Ending {
@@ -299,21 +304,40 @@ td {
   width: 380px;
   list-style: none;
   color: #fff;
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .Descripcion_cancion {
   text-align: left;
   color: white;
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
-.Titulo_Discord h2 {
+/*Estilo Video*/
+.Video_canciones {
+  background-color: #1f2e2d;
+  margin-right: 50px;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 1000px;
+  height: 250px;
+}
+
+.Titulo_canciones h2 {
   background-color: orange;
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   color: #fa0011;
+  text-align: center;
   font-weight: 100;
   padding-top: 10px;
-  padding-left: 19px;
-  padding-bottom: 50px;
-  font-family: dragonball;
+  padding-left: 5px;
+  padding-bottom: 10px;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/

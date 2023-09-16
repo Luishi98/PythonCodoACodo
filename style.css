@@ -212,9 +212,9 @@ h3 {
 }
 
 .Container_Music h2{
-  font-family: dragonball;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+    font-size: large;
 }
 
 .Container_Music {
@@ -239,7 +239,6 @@ h3 {
 
 body p {
   color: #fff;
-  font-family: dragonball;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -248,7 +247,7 @@ strong {
   color: grey;
 }
 
-.Sumario_Opening {
+.Sumario_Opening{
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;
@@ -257,8 +256,15 @@ strong {
   width: 380px;
   color: #fff;
   font-family: dragonball;
+  font-size: larger;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.Sumario_Opening li, ol{
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size:large;
 }
 
 .Titulo_Lista {
@@ -278,10 +284,6 @@ td {
   border-style: solid;
   border-color: gray;
   border-collapse: collapse;
-  font-family: dragonball;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  font-weight: 200;
 }
 
 .Canciones_Ending {
@@ -293,6 +295,12 @@ td {
   font-weight: 100;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.Sumario_Ending li, ol{
+  font-family: dragonball;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size:large;
 }
 
 .Sumario_Ending {
@@ -312,9 +320,9 @@ td {
 .Descripcion_cancion {
   text-align: left;
   color: white;
-  font-family: dragonball;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+    1px 1px 0 #000;  
+  font-weight: 500px;
 }
 
 /*Estilo Video*/
@@ -334,7 +342,7 @@ td {
     1px 1px 0 #000;
   color: #fa0011;
   text-align: center;
-  font-weight: 100;
+  font-weight: 500;
   padding-top: 10px;
   padding-left: 5px;
   padding-bottom: 10px;

@@ -17,6 +17,10 @@
   max-height: 15vh;
 }
 
+.header-mangas {
+  background-color: transparent;
+}
+
 nav img {
   width: 150 px;
 }
@@ -306,7 +310,7 @@ td {
 
 #mangas {
   /*Body*/
-  background-image: url(/images/dragonball/namekusei.jpg);
+  background-image: url(/images/kamehouse.webp);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -347,7 +351,7 @@ td {
 }
 
 /*Carrusel*/
-#mangas__carrusel {
+#mangas__carrusel, #mangas__carrusel-z, #mangas__carrusel-super {
   width: 100%;
 }
 
@@ -380,9 +384,10 @@ td {
   float: left;
   display: flex;
   height: 100%;
+  cursor: pointer;
 }
 
-.mangas__caja a img {
+.mangas__caja img {
   object-fit: cover;
   height: 447px;
   width: 100%;
@@ -391,8 +396,40 @@ td {
   transition: 0.3s ease-in-out;
 }
 
-.mangas__caja a img:hover {
+.mangas__caja img:hover {
   opacity: 0.85;
+}
+
+/*Overlay*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #555;
+  border-radius: 1.5rem;
+}
+
+.overlay.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 /*Botones*/
@@ -419,12 +456,14 @@ td {
 }
 
 #mangas__bonton-ant,
-#mangas__bonton-antz {
+#mangas__bonton-antz,
+#mangas__bonton-ant-super {
   left: 0px;
 }
 
 #mangas__bonton-sig,
-#mangas__bonton-sigz {
+#mangas__bonton-sigz,
+#mangas__bonton-sig-super {
   right: 0px;
 }
 

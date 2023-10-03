@@ -306,8 +306,13 @@ td {
 
 #mangas {
   /*Body*/
-  background-image: url(/images/dragonball/namek.png);
+  background-image: url(/images/dragonball/namekusei.jpg);
   background-size: cover;
+  background-attachment: fixed;
+}
+
+#mangas main {
+  padding-bottom: 2rem;
 }
 
 /*Titulo Mangas*/
@@ -330,6 +335,15 @@ td {
 #mangas section h2 .o {
   font-family: dragonball;
   color: #f3e603;
+}
+
+#mangas p {
+  font-family: dragonball;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #550000;
 }
 
 /*Carrusel*/
@@ -412,6 +426,11 @@ td {
 #mangas__bonton-sig,
 #mangas__bonton-sigz {
   right: 0px;
+}
+
+#footer-mangas {
+  height: 15rem;
+  background-color: #fa4;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/

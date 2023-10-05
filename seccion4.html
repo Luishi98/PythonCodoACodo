@@ -21,10 +21,12 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
 
-    <title>Personajes</title>
+
+
+  <title>Personajes</title>
 </head>
 
-<body>
+<body id="personajes">
   <nav class="header">
     <a href="index.html"><img src="images/logodragonball.png" /> </a>
     <div class="nav-links" id="navlinks">
@@ -39,6 +41,35 @@
       </ul>
     </div>
   </nav>
+  <header id="personajes-header">
+    <h1>Estos son los principales personajes de la serie <br> <span class="dragon">Dragon</span> <span
+        class="ball">Ball</span></h1>
+    <ul id="personajes-ul">
+      <li><a href="#dragonball">Dragon Ball</a></li>
+      <li>
+        <select id="menuSelect">
+          <option value="#dragonballz">Dragon Ball Z</option>
+          <option value="#sayayin">Saga Sayayin</option>
+          <option value="#freezer">Saga Freezer</option>
+          <option value="#androides">Saga Androides/Cell</option>
+          <option value="#majin">Saga Majin Buu</option>
+        </select>
+      </li>
+      <li><a href="#dragonballsuper">Dragon Ball Super</a></li>
+    </ul>
+  </header>
+  <main id="personajes-main">
+    <section style="height: 100vh;" id="dragonball">Dragon ball</section>
+    <section id="dragonballz">
+      <section style="height: 100vh;" id="sayayin">sayayin</section>
+      <section style="height: 100vh;" id="freezer">freezer</section>
+      <section style="height: 100vh;" id="androides">cell</section>
+      <section style="height: 100vh;" id="majin">majin bu</section>
+    </section>
+    <section style="height: 100vh;" id="dragonballsuper">Dragon ball super</section>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

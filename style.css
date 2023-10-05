@@ -474,6 +474,78 @@ td {
 
 /*-----------------------------------------------------------------------------------------------------*/
 
+/*Seccion (4) Personajes - Luis*/
+/*Fondo*/
+#personajes {
+  background-image: url(images/fondo-personajes.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+/*Navbar*/
+#personajes .header {
+  background-color: #aaa6;
+}
+/*Titulo*/
+#personajes-header h1 {
+  font-family: dragonball;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+#personajes-header .dragon {
+  font-family: dragonball;
+  color: orange;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+#personajes-header .ball {
+  font-family: dragonball;
+  color: red;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+/*Header*/
+#personajes-ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+  list-style: none;
+  height: 3rem;
+  background-color: #aaa6;
+}
+
+#personajes-ul li {
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+#personajes-ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#menuSelect {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+#menuSelect option {
+  background-color: #aaa6;
+  border: none;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
 /*Seccion (5) Formulario - Gonzalo*/
 
 #formulario {

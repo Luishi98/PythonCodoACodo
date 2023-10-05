@@ -310,7 +310,7 @@ td {
 
 #mangas {
   /*Body*/
-  background-image: url(/images/kamehouse.webp);
+  background-image: url(images/kamehouse.webp);
   background-size: cover;
   background-attachment: fixed;
 }

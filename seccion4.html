@@ -42,24 +42,41 @@
     </div>
   </nav>
   <header id="personajes-header">
-    <h1>Estos son los principales personajes de la serie <br> <span class="dragon">Dragon</span> <span
-        class="ball">Ball</span></h1>
-    <ul id="personajes-ul">
-      <li><a href="#dragonball">Dragon Ball</a></li>
-      <li>
-        <select id="menuSelect">
-          <option value="#dragonballz">Dragon Ball Z</option>
-          <option value="#sayayin">Saga Sayayin</option>
-          <option value="#freezer">Saga Freezer</option>
-          <option value="#androides">Saga Androides/Cell</option>
-          <option value="#majin">Saga Majin Buu</option>
-        </select>
-      </li>
-      <li><a href="#dragonballsuper">Dragon Ball Super</a></li>
-    </ul>
+    <div>
+      <h1>Estos son los principales personajes de la serie <br> <span class="dragon">Dragon</span> <span
+          class="ball">Ball</span></h1>
+      <ul id="personajes-ul">
+        <li><a href="#dragonball-hr">Dragon Ball</a></li>
+        <li>
+          <select id="menuSelect">
+            <option value="#dragonballz">Dragon Ball Z</option>
+            <option value="#sayayin">Saga Sayayin</option>
+            <option value="#freezer">Saga Freezer</option>
+            <option value="#androides">Saga Androides/Cell</option>
+            <option value="#majin">Saga Majin Buu</option>
+          </select>
+        </li>
+        <li><a href="#dragonballsuper">Dragon Ball Super</a></li>
+      </ul>
+    </div>
   </header>
   <main id="personajes-main">
-    <section style="height: 100vh;" id="dragonball">Dragon ball</section>
+    <hr id="dragonball-hr">
+    <section style="height: 100vh;" id="dragonball">
+      <h2 class="personajes__imagenes-h2"><span class="dragon">Dragon</span> <span class="ball">Ball</span></h2>
+      <div class="personajes__cont">
+        <div class="personajes__cont-box personajes__cont-box1"
+          style="--img: url(images/personajes/dragonball/1-Goku-nino.jpg)" data-txt="Goku"></div>
+        <div class="personajes__cont-box personajes__cont-box2"
+          style="--img: url(images/personajes/dragonball/2-bulma-joven.jpg)" data-txt="Bulma"></div>
+        <div class="personajes__cont-box personajes__cont-box3"
+          style="--img: url(images/personajes/dragonball/3-maestro-roshi.jpg)" data-txt="Maestro Roshi"></div>
+        <div class="personajes__cont-box personajes__cont-box4"
+          style="--img: url(images/personajes/dragonball/4-krilin.jpg)" data-txt="Krilin"></div>
+        <div class="personajes__cont-box personajes__cont-box5"
+          style="--img: url(images/personajes/dragonball/5-tortuga-marina.jpg)" data-txt="Tortuga"></div>
+      </div>
+    </section>
     <section id="dragonballz">
       <section style="height: 100vh;" id="sayayin">sayayin</section>
       <section style="height: 100vh;" id="freezer">freezer</section>

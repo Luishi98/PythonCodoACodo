@@ -341,17 +341,29 @@ td {
   color: #f3e603;
 }
 
-#mangas p {
+#mangas .dragon,
+#mangas .ball {
   font-family: dragonball;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 3rem;
-  color: #550000;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+}
+
+#mangas .dragon {
+  color: #ffa500;
+}
+
+#mangas .ball {
+  color: #ff0000;
 }
 
 /*Carrusel*/
-#mangas__carrusel, #mangas__carrusel-z, #mangas__carrusel-super {
+#mangas__carrusel,
+#mangas__carrusel-z,
+#mangas__carrusel-super {
   width: 100%;
 }
 
@@ -486,6 +498,15 @@ td {
 #personajes .header {
   background-color: #aaa6;
 }
+
+#personajes-header {
+  height: 70vh;
+}
+
+#personajes-header div {
+  margin: 20vh auto;
+}
+
 /*Titulo*/
 #personajes-header h1 {
   font-family: dragonball;
@@ -497,7 +518,7 @@ td {
 
 #personajes-header .dragon {
   font-family: dragonball;
-  color: orange;
+  color: #ffa500;
   -webkit-text-stroke: 3px #000;
   letter-spacing: 4px;
   font-size: 5rem;
@@ -505,11 +526,12 @@ td {
 
 #personajes-header .ball {
   font-family: dragonball;
-  color: red;
+  color: #ff0000;
   -webkit-text-stroke: 3px #000;
   letter-spacing: 4px;
   font-size: 5rem;
 }
+
 /*Header*/
 #personajes-ul {
   display: flex;
@@ -528,20 +550,137 @@ td {
 
 #personajes-ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #222;
+  font-weight: 700;
 }
 
 #menuSelect {
   border: none;
   background-color: transparent;
   font-size: 1.4rem;
-  color: #fff;
+  color: #222;
+  font-weight: 700;
   text-align: center;
 }
 
 #menuSelect option {
   background-color: #aaa6;
+  color: #222;
+  font-weight: 700;
   border: none;
+}
+
+/*Linea divisoria*/
+#personajes-main hr {
+  height: 1rem;
+  width: 80%;
+  margin: auto;
+  border: none;
+  background: repeating-linear-gradient(90deg, #ffa500, #ff0000);
+  border: 3px solid #fff8;
+  border-radius: .8rem;
+}
+
+/*Imagenes Dragon Ball*/
+.personajes__imagenes-h2 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.personajes__imagenes-h2 .dragon {
+  font-family: dragonball;
+  color: #ffa500;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+.personajes__imagenes-h2 .ball {
+  font-family: dragonball;
+  color: #ff0000;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+.personajes__cont {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 800px;
+  height: 500px;
+  font-family: dragonball;
+  transition: all 400ms;
+  margin: 5rem auto;
+}
+
+.personajes__cont-box {
+  position: relative;
+  background: var(--img) center center;
+  background-size: cover;
+  transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personajes__cont-box::after {
+  content: attr(data-txt);
+  font-family: dragonball;
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.personajes__cont:hover .personajes__cont-box {
+  filter: grayscale(100%) opacity(24%);
+}
+
+.personajes__cont-box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+.personajes__cont .personajes__cont-box:hover {
+  filter: grayscale(0%) opacity(100%);
+  cursor: pointer;
+}
+
+.personajes__cont:has(.personajes__cont-box1:hover) {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.personajes__cont:has(.personajes__cont-box2:hover) {
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.personajes__cont:has(.personajes__cont-box3:hover) {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.personajes__cont:has(.personajes__cont-box4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.personajes__cont:has(.personajes__cont-box5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.personajes__cont-box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+
+.personajes__cont-box:nth-child(even) {
+  transform: translateY(16px);
 }
 
 /*-----------------------------------------------------------------------------------------------------*/

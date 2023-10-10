@@ -50,7 +50,7 @@
         <li>
           <select id="menuSelect">
             <option value="#dragonballz">Dragon Ball Z</option>
-            <option value="#sayayin">Saga Sayayin</option>
+            <option value="#dragonballz-hr">Saga Sayayin</option>
             <option value="#freezer">Saga Freezer</option>
             <option value="#androides">Saga Androides/Cell</option>
             <option value="#majin">Saga Majin Buu</option>
@@ -62,9 +62,10 @@
   </header>
   <main id="personajes-main">
     <hr id="dragonball-hr">
-    <section style="height: 100vh;" id="dragonball">
+    <section id="dragonball">
       <h2 class="personajes__imagenes-h2"><span class="dragon">Dragon</span> <span class="ball">Ball</span></h2>
-      <div class="personajes__cont">
+      <!--Primera tanda de personajes-->
+      <div class="personajes__cont" onmouseover="hoverPersonajes(1)" onmouseout="restaurarPersonajes(1)" id="tanda1">
         <div class="personajes__cont-box personajes__cont-box1"
           style="--img: url(images/personajes/dragonball/1-Goku-nino.jpg)" data-txt="Goku"></div>
         <div class="personajes__cont-box personajes__cont-box2"
@@ -75,10 +76,97 @@
           style="--img: url(images/personajes/dragonball/4-krilin.jpg)" data-txt="Krilin"></div>
         <div class="personajes__cont-box personajes__cont-box5"
           style="--img: url(images/personajes/dragonball/5-tortuga-marina.jpg)" data-txt="Tortuga"></div>
+        <div class="personajes__cont-box personajes__cont-box6"
+          style="--img: url(images/personajes/dragonball/6-kami-sama.webp)" data-txt="Kami Sama"></div>
+        <div class="personajes__cont-box personajes__cont-box7"
+          style="--img: url(images/personajes/dragonball/7-mr-popo.webp)" data-txt="Mr. Popo"></div>
+        <div class="personajes__cont-box personajes__cont-box8"
+          style="--img: url(images/personajes/dragonball/8-karin.webp)" data-txt="Maestro Karin"></div>
+      </div>
+      <!--Segunda tanda de personajes-->
+      <div class="personajes__cont" onmouseover="hoverPersonajes(2)" onmouseout="restaurarPersonajes(2)" id="tanda2">
+        <div class="personajes__cont-box personajes__cont-box9"
+          style="--img: url(images/personajes/dragonball/8_1-Yajirobe.png)" data-txt="Yajirobe"></div>
+        <div class="personajes__cont-box personajes__cont-box10"
+          style="--img: url(images/personajes/dragonball/9-bora-upa.jpg)" data-txt="Bora y Upa"></div>
+        <div class="personajes__cont-box personajes__cont-box11"
+          style="--img: url(images/personajes/dragonball/10-oolong.jpg)" data-txt="Oolong"></div>
+        <div class="personajes__cont-box personajes__cont-box12"
+          style="--img: url(images/personajes/dragonball/11-yamcha.jpg)" data-txt="Yamcha"></div>
+        <div class="personajes__cont-box personajes__cont-box13"
+          style="--img: url(images/personajes/dragonball/12-puar.jpg)" data-txt="Puar"></div>
+        <div class="personajes__cont-box personajes__cont-box14"
+          style="--img: url(images/personajes/dragonball/13-Ten_Shin_Han.webp)" data-txt="Ten Shin Han"></div>
+        <div class="personajes__cont-box personajes__cont-box15"
+          style="--img: url(images/personajes/dragonball/14-chaos.webp)" data-txt="Chaos"></div>
+        <div class="personajes__cont-box personajes__cont-box16"
+          style="--img: url(images/personajes/dragonball/15-Jackie-Chun.jpg)" data-txt="Jackie-Chun (Maestro Roshi)">
+        </div>
+      </div>
+      <!--Segundtercera tanda de personajes-->
+      <div class="personajes__cont" onmouseover="hoverPersonajes(3)" onmouseout="restaurarPersonajes(3)" id="tanda3">
+        <div class="personajes__cont-box personajes__cont-box17"
+          style="--img: url(images/personajes/dragonball/17-picoro-daimaku.jpg)" data-txt="Picoro Daimaku"></div>
+        <div class="personajes__cont-box personajes__cont-box18"
+          style="--img: url(images/personajes/dragonball/16-picoro.webp)" data-txt="Picoro"></div>
+        <div class="personajes__cont-box personajes__cont-box19"
+          style="--img: url(images/personajes/dragonball/18-milk-nina.jpg)" data-txt="Milk"></div>
+        <div class="personajes__cont-box personajes__cont-box20"
+          style="--img: url(images/personajes/dragonball/19-ox-satan.jpg)" data-txt="Ox Satan"></div>
+        <div class="personajes__cont-box personajes__cont-box21"
+          style="--img: url(images/personajes/dragonball/20-launch.jpg)" data-txt="Launch"></div>
+        <div class="personajes__cont-box personajes__cont-box22"
+          style="--img: url(images/personajes/dragonball/21-anunciador-o-arbitro.jpg)" data-txt="Anunciador"></div>
+        <div class="personajes__cont-box personajes__cont-box23"
+          style="--img: url(images/personajes/dragonball/22-shen--kami.webp)" data-txt="Shen (Kami Sama)"></div>
+        <div class="personajes__cont-box personajes__cont-box24"
+          style="--img: url(images/personajes/dragonball/26-shenlong.jpg)" data-txt="Shenlong"></div>
+      </div>
+      <!--Cuarta tanda de personajes-->
+      <div class="personajes__cont" onmouseover="hoverPersonajes(4)" onmouseout="restaurarPersonajes(4)" id="tanda4">
+        <div class="personajes__cont-box personajes__cont-box25"
+          style="--img: url(images/personajes/dragonball/23-pilaf.jpg)" data-txt="Pilaf"></div>
+        <div class="personajes__cont-box personajes__cont-box26"
+          style="--img: url(images/personajes/dragonball/24-mai.jpg)" data-txt="Mai"></div>
+        <div class="personajes__cont-box personajes__cont-box27"
+          style="--img: url(images/personajes/dragonball/25-shu.jpg)" data-txt="Shu"></div>
+        <div class="personajes__cont-box personajes__cont-box28"
+          style="--img: url(images/personajes/dragonball/27-uranaibaba.jpg)" data-txt="Uranai Baba"></div>
+        <div class="personajes__cont-box personajes__cont-box29"
+          style="--img: url(images/personajes/dragonball/28-abuelito.jpg)" data-txt="Son Gohan"></div>
+        <div class="personajes__cont-box personajes__cont-box30"
+          style="--img: url(images/personajes/dragonball/29-tambourine.webp)" data-txt="Tambourine"></div>
+        <div class="personajes__cont-box personajes__cont-box31"
+          style="--img: url(images/personajes/dragonball/30-taopaipai.webp)" data-txt="Tao Pai Pai"></div>
+        <div class="personajes__cont-box personajes__cont-box32"
+          style="--img: url(images/personajes/dragonball/goku-joven.jpg)" data-txt="Goku"></div>
+      </div>
+      <!--Patrulla Roja-->
+      <h2 class="personajes__imagenes-h2"><span class="dragon">Patrulla</span> <span class="ball">Roja</span></h2>
+      <div class="personajes__cont" onmouseover="hoverPersonajes(5)" onmouseout="restaurarPersonajes(5)" id="tanda5">
+        <div class="personajes__cont-box personajes__cont-box33"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/1-comandante-red.png)" data-txt="Comandante Red"></div>
+        <div class="personajes__cont-box personajes__cont-box34"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/2-oficial-black.webp)" data-txt="Oficial Black"></div>
+        <div class="personajes__cont-box personajes__cont-box35"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/3-coronelViolet.webp)" data-txt="Coronel Violet"></div>
+        <div class="personajes__cont-box personajes__cont-box36"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/4-generalBlue.webp)" data-txt="General Blue"></div>
+        <div class="personajes__cont-box personajes__cont-box37"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/5-capitanSilver.jpg)" data-txt="Caitan Silver"></div>
+        <div class="personajes__cont-box personajes__cont-box38"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/6-sargentoMetallic.webp)" data-txt="Sargento Metallic"></div>
+        <div class="personajes__cont-box personajes__cont-box39"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/7-dock.webp)" data-txt="Dock"></div>
+        <div class="personajes__cont-box personajes__cont-box40"
+          style="--img: url(images/personajes/dragonball/patrulla-roja/8-octavioSuno.png)" data-txt="Octavio y Suno"></div>
       </div>
     </section>
     <section id="dragonballz">
-      <section style="height: 100vh;" id="sayayin">sayayin</section>
+      <hr id="dragonballz-hr">
+      <section style="height: 100vh;" id="sayayin">
+        <h2 class="personajes__imagenes-h2"><span class="dragon">Dragon</span> <span class="ball">BallZ</span></h2>
+      </section>
       <section style="height: 100vh;" id="freezer">freezer</section>
       <section style="height: 100vh;" id="androides">cell</section>
       <section style="height: 100vh;" id="majin">majin bu</section>

@@ -25,7 +25,7 @@ if (botonAnt && botonSig && track && cajaLista && caja) {
     }
   }
 }
-/*Seccion Mangas*/
+
 /*Dragon Ball Z*/
 const botonAntz = document.getElementById("mangas__bonton-antz");
 const botonSigz = document.getElementById("mangas__bonton-sigz");
@@ -52,7 +52,7 @@ if (botonAntz && botonSigz && trackz && cajaListaz && cajaz) {
     }
   }
 }
-/*Seccion Mangas*/
+
 /*Dragon Ball Super*/
 const botonAntSuper = document.getElementById("mangas__bonton-ant-super");
 const botonSigSuper = document.getElementById("mangas__bonton-sig-super");
@@ -85,6 +85,7 @@ if (
     }
   }
 }
+
 /* Overlay Mangas */
 const galleryImages = document.querySelectorAll(".img-manga");
 const overlay = document.getElementById("overlay");
@@ -108,6 +109,9 @@ if (overlay && overlayImage) {
     }
   });
 }
+
+/* Seccion Personajes */
+
 /* Menu desplegable de sagas en la seccion Personajes */
 const selectElement = document.getElementById("menuSelect");
 
@@ -115,3 +119,54 @@ selectElement.addEventListener("change", function () {
   var selectedValue = selectElement.value;
   window.location.hash = selectedValue;
 });
+
+/* Hover de imagenes de personajes */
+function hoverPersonajes(tanda) {
+  let personajesCont;
+  if (tanda === 1) {
+    personajesCont = document.getElementById("tanda1");
+  } else if (tanda === 2) {
+    personajesCont = document.getElementById("tanda2");
+  } else if (tanda === 3) {
+    personajesCont = document.getElementById("tanda3");
+  } else if (tanda === 4) {
+    personajesCont = document.getElementById("tanda4");
+  } else if (tanda === 5) {
+    personajesCont = document.getElementById("tanda5");
+  }
+
+  const boxes = personajesCont.querySelectorAll(".personajes__cont-box");
+
+  boxes.forEach((box) => {
+    box.addEventListener("mouseenter", () => {
+      personajesCont.style.gridTemplateColumns =
+        "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+
+      let boxNumber = Array.from(boxes).indexOf(box) + 1;
+
+      const columns = Array(8).fill("1fr");
+      columns[boxNumber - 1] = "3fr";
+
+      personajesCont.style.gridTemplateColumns = columns.join(" ");
+    });
+  });
+}
+
+/* Restaurar dimensiones del grid de personajes */
+function restaurarPersonajes(tanda) {
+  let personajesContenedor;
+  if (tanda === 1) {
+    personajesContenedor = document.getElementById("tanda1");
+  } else if (tanda === 2) {
+    personajesContenedor = document.getElementById("tanda2");
+  } else if (tanda === 3) {
+    personajesContenedor = document.getElementById("tanda3");
+  } else if (tanda === 4) {
+    personajesContenedor = document.getElementById("tanda4");
+  } else if (tanda === 5) {
+    personajesContenedor = document.getElementById("tanda5");
+  }
+
+  personajesContenedor.style.gridTemplateColumns =
+    "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+}

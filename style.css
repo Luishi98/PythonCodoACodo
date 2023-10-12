@@ -707,8 +707,14 @@ td {
 /*Seccion (5) Formulario - Gonzalo*/
 
 #formulario {
+
   background-image: url(images/fondoformulario.jpg);
-  background-size: cover;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+
 }
 
 #formulario nav {
@@ -717,11 +723,15 @@ td {
 
 form {
   background: #fcfcfca8;
+  /*-----centrar formulario de contacto-----*/
+  inset: 0;
+  margin: auto;
+  /*-------------------------*/
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
-  width: 120%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 650px;
   border-radius: 30px;
   justify-content: center;
   flex-direction: column;
@@ -739,10 +749,10 @@ form textarea {
   margin: 10px 0;
   padding: 10px;
   outline: none;
-  max-width: 580px;
+  max-width: 500px;
   min-width: min-content;
-  max-height: 350px;
-  min-height: 18px;
+  max-height: 250px;
+  min-height: 50px;
   background: #dadada;
   font-size: 16px;
   display: flex;
@@ -758,7 +768,9 @@ form button {
   cursor: pointer;
   width: 150px;
   margin: 20px auto 0;
+  
 }
+
 
 /*-----------------------------------------------------------------------------------------------------*/
 

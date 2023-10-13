@@ -195,3 +195,5 @@ function restaurarPersonajes(tanda) {
       "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
   }
 }
+
+/* comentario */

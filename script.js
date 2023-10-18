@@ -125,7 +125,13 @@ function hoverPersonajes(tanda) {
   let personajesCont;
   personajesCont = document.getElementById(`tanda${tanda}`);
 
-  if (tanda !== 6 && tanda !== 8 && tanda !== 9) {
+  if (
+    tanda !== 6 &&
+    tanda !== 8 &&
+    tanda !== 9 &&
+    tanda !== 12 &&
+    tanda !== 13
+  ) {
     //Secciones con 9 imagenes
     const boxes = personajesCont.querySelectorAll(".personajes__cont-box");
 
@@ -184,7 +190,13 @@ function restaurarPersonajes(tanda) {
   let personajesContenedor;
   personajesContenedor = document.getElementById(`tanda${tanda}`);
 
-  if (tanda !== 6 && tanda !== 8 && tanda !== 9) {
+  if (
+    tanda !== 6 &&
+    tanda !== 8 &&
+    tanda !== 9 &&
+    tanda !== 12 &&
+    tanda !== 13
+  ) {
     personajesContenedor.style.gridTemplateColumns =
       "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
   } else if (tanda === 9) {

@@ -770,12 +770,18 @@ td {
   justify-content: center;
   align-items: center;
   border: 1px solid #333;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
+  background-position: center top;
+}
+
+.personajes__cont-box {
+  background-position: center top;
 }
 
 .personajes__cont-box::after {
   content: attr(data-txt);
   font-family: dragonball;
+  font-size: 1.5rem;
   position: absolute;
   bottom: 20px;
   background: #000;
@@ -817,14 +823,11 @@ td {
 /*Seccion (5) Formulario - Gonzalo*/
 
 #formulario {
-
   background-image: url(images/fondoformulario.jpg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  
-
 }
 
 #formulario nav {
@@ -878,9 +881,7 @@ form button {
   cursor: pointer;
   width: 150px;
   margin: 20px auto 0;
-  
 }
-
 
 /*-----------------------------------------------------------------------------------------------------*/
 

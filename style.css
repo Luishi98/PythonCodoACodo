@@ -1287,8 +1287,7 @@ td {
   /*Imagenes Dragon Ball*/
   .personajes__cont {
     gap: 0.5rem;
-    width: 99vw;
-    margin: auto;
+    margin: 2rem auto;
   }
 
   .personajes__imagenes-h2-cell {

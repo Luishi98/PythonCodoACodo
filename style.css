@@ -729,6 +729,66 @@ td {
   transform: translateY(16px);
 }
 
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /*Imagenes Dragon Ball*/
+  .personajes__cont {
+    gap: 0.5rem;
+    width: 99vw;
+    margin: auto;
+  }
+
+  .personajes__imagenes-h2-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*Celular*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  /*Header*/
+  #personajes-ul {
+    width: 90%;
+  }
+
+  #personajes-ul li, #menuSelect, #menuSelect option {
+    font-size: 1rem;
+  }
+
+  /*Imagenes Dragon Ball*/
+  .personajes__cont {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
+    height: calc(1000px + 2rem);
+  }
+
+  .personajes__contNueve {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px 500px;
+    height: calc(1500px + 3rem);
+  }
+
+  .personajes__contCinco {
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    height: 500px;
+  }
+
+  .personajes__imagenes-h2-cell .dragon,
+  .personajes__imagenes-h2-cell .ball {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .personajes__imagenes-h2-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /*-----------------------------------------------------------------------------------------------------*/
 
 /*Seccion (5) Formulario - Gonzalo*/

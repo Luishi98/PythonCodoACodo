@@ -9,6 +9,7 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
   <!--site:Google Fonts, tipografia: Montserrat-->
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,17 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
 
-    <title>DragonBall FanBlog</title>
+
+
+  <!--google font permanent marker-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>DragonBall FanBlog</title>
 </head>
 
 <body>
@@ -29,7 +40,7 @@
     <a href="index.html"><img src="images/logodragonball.png" /> </a>
     <div class="nav-links" id="navlinks">
       <!--site:fontawesome / X mark icon-->
-      <i class="fa fa-times"></i>
+
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="seccion2.html">Openings & Endings</a></li>
@@ -39,94 +50,311 @@
       </ul>
     </div>
   </nav>
+
+  <button id="abrir-nav-links" class="menuHamburguesa">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="cerrar-menu">
+    <i class="fas fa-times"></i>
+  </div>
+
   <header>
-    <div class="text-box">
-      <!-- Titulo y bajada pagina principal / Main content-->
-      <h1>Titulo principal</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt <br />
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud
-        exercitation ullamco laboris
-      </p>
-      <a href="" class="hero-btn">Visit us for know more</a>
-    </div>
+    <!-----------------------------Imagen Numero 1 GOKU----------------------------->
+
+    <section id="dragonballintro" class="hero">
+
+      <div class="hero-text">
+
+        <h5>Fanblog</h5>
+        <h4>Akira Toriyama</h4>
+        <h1>Dragon ball</h1>
+
+
+        <p>"Dragon Ball" es una popular serie de manga y anime creada por Akira Toriyama. La historia se centra en las
+          aventuras de Son Goku, un guerrero Saiyan con habilidades extraordinarias, mientras viaja a través de mundos y
+          dimensiones para proteger la Tierra de diversas amenazas. La serie combina elementos de acción, aventura,
+          comedia y ciencia ficción, y ha sido apreciada por su animación y luchas épicas. A lo largo de la serie, los
+          personajes enfrentan desafíos cada vez más poderosos, lo que da lugar a la evolución de sus habilidades y
+          relaciones. "Dragon Ball" ha tenido un impacto significativo en la cultura popular y ha generado numerosas
+          secuelas, películas, videojuegos y productos relacionados.</p>
+
+      </div>
+
+
+      <div class="hero-img">
+        <img src="images/gokuchild.png" class="animated-image">
+      </div>
+
+    </section>
+
+    <style>
+      @keyframes moveUpDown {
+        0% {
+          transform: translateY(0);
+          /* La posición inicial es en la parte superior */
+        }
+
+        50% {
+          transform: translateY(50px);
+          /* La posición en el medio del movimiento */
+        }
+
+        100% {
+          transform: translateY(0);
+          /* La posición final es nuevamente en la parte superior */
+        }
+      }
+
+      .animated-image {
+        animation: moveUpDown 6s linear infinite;
+        /* Ajusta la duración y el estilo de la animación según tus preferencias */
+      }
+    </style>
+
+    <!-----------------------------Imagen Numero 2 PERSONAJES----------------------------->
+    <section id="dragonballintro2" class="hero2">
+
+      <div class="hero2-img imagen-izquierda-centrada">
+        <img src="images/personajes1.png" class="animated-image2">
+      </div>
+
+      <style>
+        @keyframes moveUpDown2 {
+          0% {
+            transform: translateY(0);
+            /* Posición inicial en la parte superior */
+          }
+
+          50% {
+            transform: translateY(-30px);
+            /* Posición en el medio del movimiento */
+          }
+
+          100% {
+            transform: translateY(0);
+            /* Posición final nuevamente en la parte superior */
+          }
+        }
+
+        .animated-image2 {
+          animation: moveUpDown2 8s linear infinite;
+          /* Ajusta la duración y el estilo de la animación según tus preferencias */
+        }
+      </style>
+
+      <div class="hero-text2">
+
+
+        <h4> Heroes eternos</h4>
+
+        <p>Dragon Ball trata básicamente sobre la lucha entre el bien y el mal. Al principio, algunos de los personajes
+          quieren reunir las siete Dragon Balls para pedir algún deseo personal, pero se enteran de que dichos objetos
+          también son buscados por otros con fines malignos, lo cual les lleva a enfrentarse a ellos en más de una
+          ocasión. Posteriormente aparecen adversarios más poderosos que los anteriores, con objetivos como conquistar
+          la Tierra o exterminar a la humanidad; de tal forma que en la trama abundan varios elementos característicos
+          de la ciencia ficción. Gokū y sus amigos representan el bien e intentan erradicar el mal con ayuda de las
+          Dragon Balls y otros objetos mágicos, sin que la muerte represente un obstáculo definitivo para ellos, ya que
+          pueden revivir con ayuda de dichos objetos.</p>
+      </div>
+
+
+    </section>
+
+    <br>
+    <!-----------------------------Imagen Numero 3 ESFERAS----------------------------->
+    <section>
+
+      <section id="dragonballintro3" class="hero3">
+
+        <style>
+          @keyframes moveUpDown3 {
+            0% {
+              transform: translateY(0);
+              /* Posición inicial en la parte superior */
+            }
+
+            50% {
+              transform: translateY(20px);
+              /* Posición en el medio del movimiento */
+            }
+
+            100% {
+              transform: translateY(0);
+              /* Posición final nuevamente en la parte superior */
+            }
+          }
+
+          .animated-image3 {
+            animation: moveUpDown3 2s linear infinite;
+            /* Ajusta la duración y el estilo de la animación según tus preferencias */
+          }
+        </style>
+
+        <div class="hero-text3">
+
+          <h4>Las esferas</h4>
+
+          <p>Las Esferas del Dragón, conocidas en japonés como "Dragon Balls" (ドラゴンボール, Doragon Bōru), son un elemento
+            clave en el mundo de "Dragon Ball", una popular serie de manga y anime creada por Akira Toriyama. Estas
+            esferas son objetos mágicos que tienen un papel importante en la trama de la serie. Cuando las siete Esferas
+            del Dragón son reunidas y colocadas en un orden específico, se convocará al Dragón Shenron (también conocido
+            como Polunga en Namekusei), que es un dragón mágico con el poder de conceder un deseo a la persona que lo
+            invoque. Los deseos pueden ser prácticamente cualquier cosa, desde resucitar a los muertos hasta obtener
+            riqueza o conocimiento.</p>
+
+        </div>
+
+        <div class="hero3-img">
+          <img src="images/dragon.png" class="animated-image3">
+        </div>
+
+
+
+      </section>
+
+    </section>
+
+    <!-----------------------------Imagen Numero 4 PAN----------------------------->
+
+    <section id="dragonballintro4" class="hero4">
+
+
+      <div class="hero4-img imagen-izquierda-centrada">
+        <img src="images/PAN.png" class="animated-image4">
+      </div>
+
+
+
+      <style>
+        @keyframes moveUpDown2 {
+          0% {
+            transform: translateY(0);
+            /* Posición inicial en la parte superior */
+          }
+
+          50% {
+            transform: translateY(-30px);
+            /* Posición en el medio del movimiento */
+          }
+
+          100% {
+            transform: translateY(0);
+            /* Posición final nuevamente en la parte superior */
+          }
+        }
+
+        .animated-image4 {
+          animation: moveUpDown2 8s linear infinite;
+          /* Ajusta la duración y el estilo de la animación según tus preferencias */
+        }
+      </style>
+
+      <div class="hero-text4">
+
+
+        <h4> Próxima generación...</h4>
+
+        <p>"Dragon Ball Super" (2015-2018) es una serie de anime que continúa la historia de "Dragon Ball Z" y se sitúa
+          cronológicamente después de los eventos de la Saga de Majin Buu. A lo largo de "Dragon Ball Super", los
+          personajes principales, como Goku y sus amigos, se embarcan en nuevas aventuras y enfrentan desafíos aún más
+          formidables. En esta saga, se presenta a Beerus, el Dios de la Destrucción, y su asistente Whis. Goku se
+          enfrenta a Beerus en una feroz batalla después de que Beerus despierta de un largo sueño y busca luchar contra
+          el Saiyajin legendario. Esta saga introduce el concepto de los dioses y las transformaciones como el "Super
+          Saiyajin Dios."</p>
+      </div>
+
+
+    </section>
+
+    <br>
+
+
   </header>
 
   <!---titulo 2 y articulos con textos-->
   <section class="titulo2">
-    <h1>titulo numero 2</h1>
+    <h1>Un universo en expansión...</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. pesun eros eu,
-      dignissim imperdiet neque.
+      El universo de "Dragon Ball" es vasto y está compuesto por múltiples dimensiones y universos paralelos, lo que lo
+      hace extremadamente grande en términos de escala. Aquí hay una descripción general de las dimensiones y universos
+      que componen el multiverso de "Dragon Ball":
     </p>
 
     <div class="row">
       <div class="titulo2-col">
-        <h3>article 1</h3>
+
+        <h3> Universo Principal (Universo 7)</h3>
+        <div class="imagen-recuadro1">
+          <img src="images/planeta1.png" alt="Descripción de la imagen">
+        </div>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          malesuada, arcu in vulputate porttitor, lorem ipsum tincidunt nulla,
-          et malesuada magna lacus eu massa. Vestibulum luctus vel mi a
-          aliquet. Vivamus orci arcu, cursus non eros eu, dignissim imperdiet
-          neque. Donec ornare magna ac fringilla tincidunt. Donec faucibus
-          eleifend erat ut imperdiet. In vitae sollicitudin nibh, vitae
-          rhoncus lacus. Vivamus tristique placerat odio a imperdiet. Quisque
-          justo ligula, ullamcorper non sagittis at, consequat sit amet leo.
-          Phasellus ut lacinia
-        </p>
+          La mayor parte de la historia de "Dragon Ball" tiene lugar en el Universo 7, que es el hogar de Goku y la
+          Tierra. Este universo consta de varias galaxias y mundos habitados. Incluye numerosos planetas, seres vivos y
+          civilizaciones, además de ser el escenario de los Torneos de las Artes Marciales y eventos importantes de la
+          serie. Además del Universo 7, existen otros 11 universos en el multiverso de "Dragon Ball", numerados del 1 al
+          12. Cada uno de estos universos es único y tiene sus propias características, seres vivos y deidades. Algunos
+          de estos universos se exploran en "Dragon Ball Super" durante el Torneo de Poder. </p>
       </div>
+
       <div class="titulo2-col">
-        <h3>article 2</h3>
+        <h3>Mundo de los Dioses</h3>
+        <div class="imagen-recuadro2">
+          <img src="images/planeta2.png" alt="Descripción de la imagen">
+        </div>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          malesuada, arcu in vulputate porttitor, lorem ipsum tincidunt nulla,
-          et malesuada magna lacus eu massa. Vestibulum luctus vel mi a
-          aliquet. Vivamus orci arcu, cursus non eros eu, dignissim imperdiet
-          neque. Donec ornare magna ac fringilla tincidunt. Donec faucibus
-          eleifend erat ut imperdiet. In vitae sollicitudin nibh, vitae
-          rhoncus lacus. Vivamus tristique placerat odio a imperdiet. Quisque
-          justo ligula, ullamcorper non sagittis at, consequat sit amet leo.
-          Phasellus ut lacinia
+          Mundo de los Dioses (Reino Celestial): El Mundo de los Dioses es el hogar de los Kaio, seres divinos que
+          supervisan la creación y el equilibrio del universo. Incluye el Reino de los Kaio, el Planeta Sagrado y otros
+          reinos divinos. El "Mundo de los Dioses" o "Reino Celestial" (también conocido como el "Kaioshin Realm" en
+          inglés) es una dimensión divina que desempeña un papel importante en el universo de "Dragon Ball". Este reino
+          es el hogar de los Kaio-shin, seres divinos que supervisan y mantienen el equilibrio en el universo, y también
+          es el lugar donde residen otros seres divinos, como el Gran Kaio-shin.
         </p>
       </div>
 
       <div class="titulo2-col">
-        <h3>article 3</h3>
+        <h3>Inframundo</h3>
+        <div class="imagen-recuadro3">
+          <img src="images/planeta3.png" alt="Descripción de la imagen">
+        </div>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          malesuada, arcu in vulputate porttitor, lorem ipsum tincidunt nulla,
-          et malesuada magna lacus eu massa. Vestibulum luctus vel mi a
-          aliquet. Vivamus orci arcu, cursus non eros eu, dignissim imperdiet
-          neque. Donec ornare magna ac fringilla tincidunt. Donec faucibus
-          eleifend erat ut imperdiet. In vitae sollicitudin nibh, vitae
-          rhoncus lacus. Vivamus tristique placerat odio a imperdiet. Quisque
-          justo ligula, ullamcorper non sagittis at, consequat sit amet leo.
-          Phasellus ut lacinia
+          En el universo de "Dragon Ball" es una dimensión que sirve como el reino de la muerte, donde las almas de los
+          seres fallecidos van después de la muerte. Aunque no se explora en profundidad en la serie, se menciona y
+          representa en varias ocasiones. El Inframundo se compone de dos partes principales: el Cielo y el Infierno.
+          Las almas de las personas que llevaron una vida virtuosa y se consideran merecedoras de recompensa van al
+          Cielo, donde disfrutan de la paz y la felicidad. Por otro lado, las almas de los malhechores y personas
+          malvadas son enviadas al Infierno, donde enfrentan castigos y tormentos adecuados a sus pecados.
         </p>
       </div>
     </div>
   </section>
+
+
   <!--- ABOUT: acerca de nuestra empresa-->
   <section class="ABOUT">
-    <h1>Acerca de nuestra empresa</h1>
+    <h1>Acerca del blog</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tellus
-      mi, ultrices id augue ut, sodales blandit tortor. ellus mi, ultrices id
-      augue ut, sodales blandit tortorellus mi, ultrices id augue ut, sodales
-      blandit tortor ellus mi, ultrices id augue ut, sodales blandit
-      tortorellus mi, ultrices id augue ut, sodales blandit tortor ellus mi,
-      ultrices id augue ut, sodales blandit tortorellus mi, ultrices id augue
-      ut, sodales blandit tortor
+      Dragon Ball Z fan blog busca proporcionar información acerca del universo de Dragon Ball. Aquí encontrarás todo
+      tipo de material relacionado con los héroes, villanos, música y arte de Dragon Ball. Internet es un lugar muy
+      grande, por eso concentrar la información en un lugar es de vital importancia. El lore de Dragon Ball es muy
+      amplio, por eso hemos decidido resumir la información con el fin de facilitar la lectura sin obviar detalles
+      importantes. Espero que te guste el sitio y muchas gracias por tu visita.
     </p>
 
-    <div class="row">
-      <div class="column">
-        <img src="images/landscape 1.jpg" />
-        <div class="layer"></div>
-      </div>
-    </div>
+    <img src="images/grupo.png" alt="dragon ball z squad" class="responsive-image">
+
+    <style>
+      .responsive-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </section>
+
+
   <br /><br />
 
   <!--titulo arriba del mapa: Donde estamos-->
@@ -136,7 +364,7 @@
 
   <!--Mapa google-->
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166642.52431183818!2d-58.41496211168074!3d-34.69082197326144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1692524303799!5m2!1ses-419!2sar"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13133.862463224703!2d-58.4357975!3d-34.6176721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca414b39c13b%3A0x45ec83b507b79262!2sMeridiana%20Comics!5e0!3m2!1sen!2sar!4v1697781716475!5m2!1sen!2sar"
     width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
@@ -144,13 +372,9 @@
   <!--footer-->
 
   <footer class="footer">
-    <h4>About us</h4>
+    <h4>Dragon Ball Fan blog 2023</h4>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tellus
-      mi, ultrices id augue ut, sodales blandit tortor. Integer quis velit
-      massa. Cras aliquet leo eu<br />
-      elementum euismod. Sed molestie orci at tincidunt pharetra. Nulla et
-      malesuada mi, quis varius dui. Class
+      Este sitio ha sido creado para la entrega final del trabajo de Codo a Codo.
     </p>
 
     <!--iconos del sitio: iconify -->
@@ -169,6 +393,14 @@
       <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </div>
   </footer>
+
+
+  <script src="script.js">
+
+  </script>
+
 </body>
+
+
 
 </html>

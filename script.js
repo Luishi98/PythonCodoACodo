@@ -1,3 +1,20 @@
+/* Barra navegación*/
+document.addEventListener('DOMContentLoaded', function () {
+  const abrirNavlist = document.getElementById('abrir-nav-links');
+  const cerrarMenu = document.querySelector('.cerrar-menu');
+  const navlist = document.querySelector('.nav-links');
+
+  // Agregar evento clic al botón para abrir el menú
+  abrirNavlist.addEventListener('click', function () {
+    navlist.style.display = 'flex'; // Muestra el navlist cuando se hace clic
+  });
+
+  // Agregar evento clic al botón para cerrar el menú
+  cerrarMenu.addEventListener('click', function () {
+    navlist.style.display = 'none'; // Oculta el navlist cuando se hace clic
+  });
+});
+
 /*Seccion Mangas*/
 /*Dragon Ball*/
 const botonAnt = document.getElementById("mangas__bonton-ant");
@@ -208,4 +225,42 @@ function restaurarPersonajes(tanda) {
   }
 }
 
-/* comentario */
+/* Formulario */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
+
+  form.addEventListener("submit", function (event) {
+    let valid = true;
+
+    // Validar el nombre (solo letras y espacios)
+    if (!/^[A-Za-z\s]+$/.test(nameInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese un nombre válido sin números.");
+    }
+
+    // Validar el correo electrónico (formato de correo electrónico válido)
+    if (!/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese una dirección de correo electrónico válida.");
+    }
+
+    // Validar el número de teléfono (solo dígitos)
+    if (!/^\d+$/.test(phoneInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese un número de teléfono válido.");
+    }
+
+    if (!valid) {
+      event.preventDefault(); // Evitar el envío del formulario si hay errores
+    }
+  });
+});
+
+
+

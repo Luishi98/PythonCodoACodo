@@ -4,25 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
+
     <!--favicon logo-->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
     <!--site:Google Fonts, tipografia: Montserrat-->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,400;0,900;1,900&display=swap"
-      rel="stylesheet" />
-  
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,400;0,900;1,900&display=swap"
+        rel="stylesheet" />
+
     <!-- site: BootstrapCDN-->
     <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
-  
-      <title>Openings & Endings</title>
-  </head>
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Openings & Endings</title>
+</head>
 
 <body class="Fondo">
     <nav class="header">
@@ -39,15 +41,29 @@
             </ul>
         </div>
     </nav>
+
+
+
+    <button id="abrir-nav-links" class="menuHamburguesa">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="cerrar-menu">
+        <i class="fas fa-times"></i>
+    </div>
+
+
+
     <!--Conteiner Flex-->
     <div class="Container_general">
         <!--Contenedor de todo el contenido-->
         <div class="Container_Music">
-            <a href="">de: Música</a>
+
             <br>
             <br>
             <!--Canciones Opening-->
             <h1>Canciones Opening</h1>
+            <img src="images/goku3.png" alt="goku3" class="goku3">
             <br>
             <br>
             <p>Los Opening, son las conocidas como <strong>canciones de apertura</strong>, son las canciones que se
@@ -203,6 +219,7 @@
             <div>
                 <h2>Makafushigi Adventure!</h2>
                 <hr>
+
                 <p>El tema de apertura usado en la primera parte de Dragon Ball. Tuvo 2 versiones de secuencia de vídeo:
                     la primera desde el episodio 1 al 101; la segunda abarcó el resto de episodios en donde cambiaron
                     algunas escenas más acordes al punto en el que estaba la historia. </p>
@@ -212,7 +229,23 @@
                 <p>El primer tema de apertura usado en Dragon Ball Z. Tuvo 3 versiones, la primera desde el episodio 1
                     al 21, la segunda del episodio 22 al 117; y la tercera estuvo presente desde el 118 hasta el 199
                     cambiando algunas escenas acorde iba avanzando la trama, pero conservando la música.</p>
+
                 <br><br>
+
+                <div class="video-container">
+                    <iframe class="video-responsive" width="900" height="400"
+                        src="https://www.youtube.com/embed/cie7scVUdQE?si=33FoT6JjTbhG1Rkv&amp;controls=0"
+                        title="Título del video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+
+
+
+                <br><br>
+                <br><br>
+
                 <h2>We Gotta Power</h2>
                 <hr>
                 <p>El segundo tema de apertura de Dragon Ball Z. Desde el episodio 200 hasta el 291.</p>
@@ -228,6 +261,7 @@
                 <h2>Fight it out!!</h2>
                 <hr>
                 <p>Tema de apertura usado para Dragon Ball Z Kai: Los capítulos finales.</p>
+                <img src="images/trunks.png" alt="trunks" class="trunks">
                 <br><br>
                 <h2>Kuu-Zen-Zetsu-Go</h2>
                 <hr>
@@ -549,7 +583,17 @@
                 <p>Es la primera canción de cierre de Dragon Ball Z, fue compuesto por Takeshi Ike (música) y Naruhisa
                     Arakawa (letra), arreglos de Kenji Yamamoto, e interpretado por MANNA. Es utilizado en los episodios
                     1 a 199.</p>
-                <br>
+                <br><br>
+
+                <div class="video-container">
+                    <iframe class="video-responsive" width="900" height="400"
+                        src="https://www.youtube.com/embed/4XqIAu3UOc0" title="Título del video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+
+                <br><br>
                 <h3 class="Descripcion_cancion">Boku-tachi wa Tenshi datta</h3><!--Nombre de la canción-->
                 <p>Es la segunda canción de cierre de Dragon Ball Z, siendo compuesto por Takeshi Ike (música) y
                     Yukinojo Mori(letra), con arreglos de Osamu Totsuka. Es interpretado por Hironobu Kageyama. Se
@@ -557,6 +601,7 @@
                 <br><br>
                 <!--Serie: Dragon Ball GT-->
                 <h2>Dragon Ball GT</h2>
+
                 <hr>
                 <br>
                 <h3 class="Descripcion_cancion">Hitori ja Nai</h3><!--Nombre de la canción-->
@@ -572,7 +617,11 @@
                 <br>
                 <h3 class="Descripcion_cancion">Blue Velvet</h3><!--Nombre de la canción-->
                 <p>Es la tercera canción de cierre de Dragon Ball GT, fue compuesto por Hatake (música) y Aeri (letra),
-                    con arreglos de Hatake e interpretado por Shizuka Kudō. Es utilizado en los episodios 42 a 50.</p>
+                    con arreglos de Hatake e interpretado por Shizuka Kudō. Es utilizado en los episodios 42 a 50.
+                </p>
+
+                <img src="images/kaioshin.png" alt="kaioshin" class="kaioshin">
+
                 <br>
                 <h3 class="Descripcion_cancion">Sabitsuita Machinegun de Ima o Uchinuko</h3><!--Nombre de la canción-->
                 <p>Es la cuarta canción de cierre de Dragon Ball GT, fue compuesto por Miho Komatsu (música) y Miho
@@ -587,11 +636,13 @@
                 <p>Es la primera canción de cierre de Dragon Ball Z Kai, es interpretada por Takayoshi Tanimoto,
                     compuesta por Iwasaki Takafumi y escrita por Mori Yuriko. Es utilizada desde el episodio 1 al 54.
                 </p>
+
                 <br>
                 <h3 class="Descripcion_cancion">Wings of the Heart</h3><!--Nombre de la canción-->
                 <p>Es la segunda canción de cierre de Dragon Ball Kai, es interpretada por Team Dragon, compuesta por
                     Yoko Kensuke y escrita por Akimoto Yasushi. Es utilizada desde el episodio 55 al 98.</p>
                 <br>
+
                 <h3 class="Descripcion_cancion">Never give up!!!</h3><!--Nombre de la canción-->
                 <p>Es la tercera canción de cierre de Dragon Ball Z Kai, es interpretado por la banda Junear. Es
                     utilizada desde el episodio 99 al 167.Este Ending nunca fue emitido en Japón.</p>
@@ -623,6 +674,18 @@
                 <h3 class="Descripcion_cancion">Hello Hello Hello</h3><!--Nombre de la canción-->
                 <p>Es la primer canción de cierre de Dragon Ball Super, es interpretado por la banda Good Morning
                     America y debutó en el capitulo 1 del ya antes dicho anime y duró hasta el capitulo 12.</p>
+                <br><br>
+
+
+                <div class="video-container">
+                    <iframe class="video-responsive" width="900" height="400"
+                        src="https://www.youtube.com/embed/vgtqbWeFwxk?si=nVsY74FVUlkodIVj&controls=0"
+                        title="Título del video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+
                 <br>
                 <h3 class="Descripcion_cancion">Starring Star</h3><!--Nombre de la canción-->
                 <p>Es la segunda canción de cierre de Dragon Ball Super, es interpretado por la banda KEYTALK, debutó en
@@ -639,6 +702,11 @@
                 <h3 class="Descripcion_cancion">Yoka-Yoka Dance</h3><!--Nombre de la canción-->
                 <p>Es la quinta canción de cierre de Dragon Ball Super, es interpretado por la banda Batten Shōjo-Tai.
                 </p>
+
+
+                <img src="images/frieza.png" alt="frieza" class="frieza">
+
+                
                 <br>
                 <h3 class="Descripcion_cancion">Chaofan Music</h3><!--Nombre de la canción-->
                 <p>Es la sexta canción de cierre de Dragon Ball Super. Es interpretado por la banda Arukara.</p>
@@ -661,13 +729,39 @@
                 <br>
             </div>
         </div>
-        <!--Server_Discord-->
-        <div class="Server_Discord">
-            <div class="Titulo_Discord">
-                <h2>Servidor de Discord</h2>
-            </div>
-        </div>
+
+
+
     </div>
+    <footer class="footer">
+        <h4>Dragon Ball Fan blog 2023</h4>
+        <p>
+            Este sitio ha sido creado para la entrega final del trabajo de Codo a Codo.
+        </p>
+
+        <!--iconos del sitio: iconify -->
+        <div class="icons">
+            <!--facebook logo-->
+            <iconify-icon icon="logos:facebook"></iconify-icon>
+            <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+            <!--twitter logo-->
+            <iconify-icon icon="skill-icons:twitter"></iconify-icon>
+            <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+            <!--Instagram logo-->
+            <iconify-icon icon="skill-icons:instagram"></iconify-icon>
+            <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+            <!--Linkedin logo-->
+            <iconify-icon icon="skill-icons:linkedin"></iconify-icon>
+            <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        </div>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+    
+
+
 </body>
 
 </html>

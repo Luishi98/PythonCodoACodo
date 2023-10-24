@@ -4,22 +4,25 @@
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Bebas Neue", sans-serif;
-  font-family: "Montserrat", sans-serif;
+
 }
 
-/*Barra de navegacion general*/
+
+body {
+  background-color: red;
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+}
+
+
 /*Barra de navegacion general*/
 .header {
   width: 100%;
   display: flex;
   padding: 2% 6%;
-  justify-content: space space-between;
+  justify-content: space-between;
   align-items: center;
-  background-color: #550000;
+  background-color: red;
+  /* No estoy seguro de si querías mantener "none" aquí */
   max-height: 15vh;
 }
 
@@ -29,14 +32,12 @@
 
 nav img {
   width: 150 px;
-  width: 150 px;
+
 }
 
 .nav-links {
-  flex: 1;
   text-align: right;
-  flex: 1;
-  text-align: right;
+
 }
 
 .nav-links ul li {
@@ -54,35 +55,537 @@ nav img {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
+  position: right;
 }
 
 .nav-links ul li::after {
   content: "";
-  width: 0%;
-  height: 2px;
-  background: #f44336;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
   display: block;
   margin: auto;
-  transition: 0.5s;
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #f44336;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .nav-links ul li:hover::after {
   width: 100%;
-  width: 100%;
 }
 
-/*Index*/
-/*Index*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----hamburguer menu-----*/
+
+.menuHamburguesa {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 3;
+}
+
+nav .fa {
+  display: block;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cerrar-menu {
+  position: absolute;
+  top: 10px;
+  /* Ajusta la posición vertical según tus necesidades */
+  right: 10px;
+  /* Ajusta la posición horizontal según tus necesidades */
+  cursor: pointer;
+  font-size: 15px;
+  /* Tamaño del ícono */
+  color: white;
+  /* Color del ícono */
+  z-index: 2;
+}
+
+.cerrar-menu i:hover {
+  color: red;
+  /* Cambia el color del ícono al pasar el cursor por encima */
+}
+
+/* Botón para abrir el navlist con el icono de menú hamburguesa */
+.boton-nav {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 3;
+  /* Asegura que el botón esté por encima de otros elementos */
+
+}
+
+@media (max-width: 700px) {
+  .boton-nav {
+    display: block;
+    /* Asegura que el botón esté siempre visible en dispositivos móviles */
+  }
+
+  .nav-links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.349);
+    backdrop-filter: blur(2rem);
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    padding: 1rem;
+    line-height: 0.9;
+    text-decoration: none;
+
+  }
+
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Index-Home*/
+
+/*Titulo y imagen N1 GOKU*/
+
+#dragonballintro {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+
+#dragonballintro {
+  padding: 0 19%;
+}
+
+.hero-text h5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 130px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.hero-text h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+
+
+@media (max-width: 1460px) {
+  section {
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 1340px */
+  .hero-img img {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas más pequeñas */
+    height: auto;
+  }
+}
+
+.hero-text h1 {
+  font-size: 140px;
+  margin: 0 0 30px;
+}
+
+.hero-text h5 {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1195px) {
+  section {
+    padding: 0 3%;
+    transition: .2s;
+  }
+
+  .hero-text {
+    padding-top: 115px;
+  }
+
+  .hero-img {
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 90px;
+    /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    margin: 0 0 30px;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N2 PERSONAJES*/
+
+#dragonballintro2 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero2-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+.hero2-img {
+  text-align: center;
+  /* Alinea el contenido al centro en lugar de a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+#dragonballintro2 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text2 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#dragonballintro2 h4 {
+  color: white;
+  text-align: left;
+}
+
+#dragonballintro2 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro2 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero2-img img {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N3 ESFERAS*/
+
+
+#dragonballintro3 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero3-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+.hero3-img {
+  text-align: right;
+  /* Alinea el contenido a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.animated-image3 {
+  width: 100%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+#dragonballintro3 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text3 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#dragonballintro3 h4 {
+  color: white;
+  text-align: left;
+}
+
+#dragonballintro3 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro3 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero3-img img,
+  .animated-image3 {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N4 PAN*/
+
+
+#dragonballintro4 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero4-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+.hero4-img {
+  text-align: right;
+  /* Alinea el contenido a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.animated-image4 {
+  width: 100%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+#dragonballintro4 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text4 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#dragonballintro3 h4 {
+  color: white;
+  text-align: left;
+}
+
+#dragonballintro4 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro4 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero4-img img,
+  .animated-image3 {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------Imagenes de los planetas dentro de el recuadro--------------------*/
+
+.imagen-recuadro1 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro1 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+/*------------------------*/
+
+.imagen-recuadro2 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro2 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+/*------------------------*/
+
+
+.imagen-recuadro3 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro3 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+
+
+/*------------Mapa google-------------*/
+.location {
+color: white;
+}
+/*-----------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
 .text-box {
   width: 90%;
   color: #fff;
@@ -162,46 +665,9 @@ nav .fa {
   }
 
   /* sidebar */
-  .nav-links {
-    position: absolute;
-    background: #f44336;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
-  }
 
-  /* sidebar */
-  .nav-links {
-    position: absolute;
-    background: #f44336;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
-  }
 
-  /* icons hidden sidebar */
-  nav.fa {
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
 
-  /* icons hidden sidebar */
-  nav.fa {
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
 
   .nav-links ul {
     padding: 30px;
@@ -222,6 +688,7 @@ nav .fa {
   margin: auto;
   text-align: center;
   padding-top: 100px;
+  color: white;
 }
 
 h1 {
@@ -262,7 +729,7 @@ p {
   box-sizing: border-box;
   transition: 0.5s;
   flex-basis: 31%;
-  background: #fff3f3;
+  background: #00000075;
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -296,7 +763,7 @@ h3 {
   }
 }
 
-/*ABOUT: acerca de nuestra empresa*/
+/*ABOUT: acerca del blog*/
 .ABOUT {
   width: 80%;
   margin: auto;
@@ -306,6 +773,7 @@ h3 {
   margin: auto;
   text-align: center;
   padding-top: 50px;
+  color: white;
 }
 
 .location {
@@ -323,20 +791,40 @@ h3 {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: stretch;
+  margin-left: -80px;
+  background-color: #181616;
+  background-image: url('images/namek1.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la URL de tu imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen de fondo en su posición */
 }
+
+@media (max-width: 200px) {
+  .Container_general {
+    flex-direction:column; /* Cambia la dirección a columna en pantallas más pequeñas */
+  }
+}
+
 
 .Container_Music {
   margin-top: 10px;
   margin-right: 250px;
-  margin-left: 50px;
-  background-color: #1f2e2d;
+  margin-left: 2%x;
+  
   padding-left: 50px;
   padding-bottom: 50px;
   padding-right: 50px;
 }
 
+
+.Container_Music {
+background-color: none;
+margin-left: 50px;
+}
+
+
 .Server_Discord {
-  background-color: #1f2e2d;
+  background-color: none;
   margin-right: 40px;
   margin-top: 10px;
   width: 1000px;
@@ -344,12 +832,12 @@ h3 {
 }
 
 .Fondo {
-  background-image: url(images/Site-background-dark_2.JPG);
+  background-image: none;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  color: orange;
+  color: white;
 }
 
 body p {
@@ -357,7 +845,7 @@ body p {
 }
 
 strong {
-  color: grey;
+  color: white;
 }
 
 .Sumario_Opening {
@@ -365,7 +853,7 @@ strong {
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 2px solid orange;
+  border: 1px solid rgba(255, 0, 0, 0.685);
   width: 380px;
   color: #fff;
 }
@@ -379,12 +867,14 @@ tr,
 th,
 td {
   border-style: solid;
-  border-color: gray;
+  border-color: rgba(255, 0, 0, 0.685);
   border-collapse: collapse;
+  border-width: 1px; /* Ajusta el grosor según tus necesidades */
+  line-height: 2;
 }
 
 .Canciones_Ending {
-  border-top: 7px black solid;
+  border-top: none;
 }
 
 .Sumario_Ending {
@@ -392,7 +882,7 @@ td {
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 30px;
-  border: 2px solid orange;
+  border: 2px solid rgba(255, 0, 0, 0.685);
   width: 380px;
   list-style: none;
   color: #fff;
@@ -403,11 +893,73 @@ td {
   color: white;
 }
 
+/* recuadro eliminado 
 .Titulo_Discord h2 {
   background-color: orange;
   color: black;
   padding-bottom: 50px;
 }
+*/
+
+/*Seccion (2) imagenes*/
+
+.goku3 {
+  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  display: block; /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  animation: moveUpDown 2s infinite; /* Aplica la animación 'moveUpDown' durante 2 segundos de forma infinita */
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Mueve la imagen hacia arriba 20px */
+  }
+}
+
+
+.trunks {
+  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  display: block; /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  
+}
+
+
+.kaioshin {
+  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  display: block; /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+ 
+}
+
+.frieza {
+  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  display: block; /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+ 
+}
+
+
+.video-container {
+  text-align: center; /* Centra el contenido horizontalmente */
+  position: relative;
+}
+
+
+.video-responsive {
+  max-width: 100%;
+  
+}
+
+
+
 
 /*-----------------------------------------------------------------------------------------------------*/
 
@@ -820,12 +1372,12 @@ td {
 
 #formulario {
 
-  background-image: url(images/fondoformulario.jpg);
-  background-size:cover;
+  background-image: url('images/fondoformulario2.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la URL o la ruta de tu imagen */
+  background-color: red; /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  
 
 }
 
@@ -834,14 +1386,14 @@ td {
 }
 
 form {
-  background: #fcfcfca8;
+  background: #14141471;
   /*-----centrar formulario de contacto-----*/
   inset: 0;
   margin: auto;
   /*-------------------------*/
   display: flex;
   flex-direction: column;
-  padding: 2vw 4vw;
+  padding: 9vw 4vw;
   width: 100%;
   max-width: 650px;
   border-radius: 30px;
@@ -850,7 +1402,7 @@ form {
 }
 
 form h3 {
-  color: #555;
+  color: white;
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -872,7 +1424,7 @@ form textarea {
 
 form button {
   padding: 15px;
-  background: #ff5361;
+  background: #ff0116;
   color: #fff;
   font-size: 18;
   border: 0;
@@ -880,7 +1432,7 @@ form button {
   cursor: pointer;
   width: 150px;
   margin: 20px auto 0;
-  
+
 }
 
 
@@ -894,9 +1446,10 @@ form button {
 }
 
 .footer h4 {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   margin-top: 20px;
   font-weight: 600;
+  color: white;
 }
 
 .icons .fa {

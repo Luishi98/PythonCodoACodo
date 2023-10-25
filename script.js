@@ -1,17 +1,17 @@
 /* Barra navegación*/
-document.addEventListener('DOMContentLoaded', function () {
-  const abrirNavlist = document.getElementById('abrir-nav-links');
-  const cerrarMenu = document.querySelector('.cerrar-menu');
-  const navlist = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+  const abrirNavlist = document.getElementById("abrir-nav-links");
+  const cerrarMenu = document.querySelector(".cerrar-menu");
+  const navlist = document.querySelector(".nav-links");
 
   // Agregar evento clic al botón para abrir el menú
-  abrirNavlist.addEventListener('click', function () {
-    navlist.style.display = 'flex'; // Muestra el navlist cuando se hace clic
+  abrirNavlist.addEventListener("click", function () {
+    navlist.style.display = "flex"; // Muestra el navlist cuando se hace clic
   });
 
   // Agregar evento clic al botón para cerrar el menú
-  cerrarMenu.addEventListener('click', function () {
-    navlist.style.display = 'none'; // Oculta el navlist cuando se hace clic
+  cerrarMenu.addEventListener("click", function () {
+    navlist.style.display = "none"; // Oculta el navlist cuando se hace clic
   });
 });
 
@@ -151,18 +151,37 @@ function hoverPersonajes(tanda) {
   ) {
     //Secciones con 9 imagenes
     const boxes = personajesCont.querySelectorAll(".personajes__cont-box");
+    const anchoPantalla = window.innerWidth;
 
     boxes.forEach((box) => {
       box.addEventListener("mouseenter", () => {
-        personajesCont.style.gridTemplateColumns =
-          "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+        if (anchoPantalla <= 768) {
+          personajesCont.style.gridTemplateColumns =
+            "1fr 1fr 1fr 1fr";
+            personajesCont.style.gridTemplateRows =
+            "500px 500px";
 
-        let boxNumber = Array.from(boxes).indexOf(box) + 1;
+          let boxNumber = Array.from(boxes).indexOf(box) + 1;
+          if (boxNumber > 4) {
+            boxNumber -= 4;
+          }
+          
+          const columns = Array(4).fill("1fr");
+          columns[boxNumber - 1] = "3fr";
+          //console.log(columns);
 
-        const columns = Array(8).fill("1fr");
-        columns[boxNumber - 1] = "3fr";
+          personajesCont.style.gridTemplateColumns = columns.join(" ");
+        } else {
+          personajesCont.style.gridTemplateColumns =
+            "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
 
-        personajesCont.style.gridTemplateColumns = columns.join(" ");
+          let boxNumber = Array.from(boxes).indexOf(box) + 1;
+
+          const columns = Array(8).fill("1fr");
+          columns[boxNumber - 1] = "3fr";
+
+          personajesCont.style.gridTemplateColumns = columns.join(" ");
+        }
       });
     });
   } else if (tanda === 9) {
@@ -185,18 +204,36 @@ function hoverPersonajes(tanda) {
   } else {
     //Secciones con 8 imagenes
     const boxes = personajesCont.querySelectorAll(".personajes__cont-box");
+    const anchoPantalla = window.innerWidth;
 
     boxes.forEach((box) => {
       box.addEventListener("mouseenter", () => {
-        personajesCont.style.gridTemplateColumns =
-          "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+        if (anchoPantalla <= 768) {
+          personajesCont.style.gridTemplateColumns = "1fr 1fr 1fr";
+          personajesCont.style.gridTemplateRows = "500px 500px 500px";
 
-        let boxNumber = Array.from(boxes).indexOf(box) + 1;
+          let boxNumber = Array.from(boxes).indexOf(box) + 1;
+          if (boxNumber > 6) {
+            boxNumber -= 6;
+          } else if (boxNumber > 3) {
+            boxNumber -= 3;
+          }
 
-        const columns = Array(9).fill("1fr");
-        columns[boxNumber - 1] = "3fr";
+          const columns = Array(3).fill("1fr");
+          columns[boxNumber - 1] = "3fr";
 
-        personajesCont.style.gridTemplateColumns = columns.join(" ");
+          personajesCont.style.gridTemplateColumns = columns.join(" ");
+        } else {
+          personajesCont.style.gridTemplateColumns =
+            "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+
+          let boxNumber = Array.from(boxes).indexOf(box) + 1;
+
+          const columns = Array(9).fill("1fr");
+          columns[boxNumber - 1] = "3fr";
+
+          personajesCont.style.gridTemplateColumns = columns.join(" ");
+        }
       });
     });
   }
@@ -206,7 +243,7 @@ function hoverPersonajes(tanda) {
 function restaurarPersonajes(tanda) {
   let personajesContenedor;
   personajesContenedor = document.getElementById(`tanda${tanda}`);
-
+  let anchoPantalla = window.innerWidth;
   if (
     tanda !== 6 &&
     tanda !== 8 &&
@@ -214,19 +251,28 @@ function restaurarPersonajes(tanda) {
     tanda !== 12 &&
     tanda !== 13
   ) {
-    personajesContenedor.style.gridTemplateColumns =
-      "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    if (anchoPantalla <= 768) {
+      personajesContenedor.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+      personajesContenedor.style.gridTemplateRows = "500px 500px";
+    } else {
+      personajesContenedor.style.gridTemplateColumns =
+        "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    }
   } else if (tanda === 9) {
     personajesContenedor.style.gridTemplateColumns =
       "1.5fr 1.5fr 1.5fr 1.5fr 1.5fr";
   } else {
-    personajesContenedor.style.gridTemplateColumns =
-      "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    if (anchoPantalla <= 768) {
+      personajesContenedor.style.gridTemplateColumns = "1fr 1fr 1fr";
+      personajesContenedor.style.gridTemplateRows = "500px 500px 500px";
+    } else {
+      personajesContenedor.style.gridTemplateColumns =
+        "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+    }
   }
 }
 
 /* Formulario */
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
@@ -261,6 +307,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-
-

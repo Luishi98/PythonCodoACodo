@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!--favicon logo-->
+  <link rel="icon" href="images/favicon4estrellas.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--site:Google Fonts, tipografia: Montserrat-->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,400;0,900;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- site: BootstrapCDN-->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
+</head>
+
+<section id="visualizaciondispositivos">
+
+  <body id="formulario">
+    <title>Contacto</title>
+    <nav class="header">
+      <a href="index.html"><img src="images/logodragonball.png" /> </a>
+      <div class="nav-links" id="navlinks">
+        <!--site:fontawesome / X mark icon-->
+        <i class="fa fa-times"></i>
+
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seccion2.html">Openings & Endings</a></li>
+          <li><a href="seccion3.html">Mangas</a></li>
+          <li><a href="seccion4.html">Personajes</a></li>
+          <li><a href="seccion5.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button id="abrir-nav-links" class="menuHamburguesa">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="cerrar-menu">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <section>
+      <div class="container">
+        <form action="https://formsubmit.co/dragonballzblog2023@gmail.com" method="POST" id="contact-form">
+          <h3> Contacto </h3>
+          <input type="text" name="name" id="name" placeholder="Tu nombre" required>
+          <input type="email" name="email" id="email" placeholder="Casilla de correo" required>
+          <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" required>
+          <textarea name="message" id="message" rows="4" placeholder="¿Cómo te puedo ayudar?" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <h4>Dragon Ball Fan blog 2023</h4>
+      <p id="textosindex">
+        Este sitio ha sido creado para la entrega final del trabajo de Codo a Codo.
+      </p>
+
+    <!--iconos del sitio: iconify -->
+    <div class="icons">
+      <!--facebook logo-->
+      <a href="https://www.facebook.com" target="_blank">
+        <iconify-icon icon="logos:facebook"></iconify-icon>
+      </a>
+      <!--twitter logo-->
+      <a href="https://twitter.com" target="_blank">
+        <iconify-icon icon="skill-icons:twitter"></iconify-icon>
+      </a>
+      <!--Instagram logo-->
+      <a href="https://www.instagram.com" target="_blank">
+        <iconify-icon icon="skill-icons:instagram"></iconify-icon>
+      </a>
+      <!--Linkedin logo-->
+      <a href="https://www.linkedin.com" target="_blank">
+        <iconify-icon icon="skill-icons:linkedin"></iconify-icon>
+      </a>
+
+    </div>
+  </footer>
+
+
+
+    <!----------------------- Codigo Javascript----------------------->
+    <script src="script.js"></script>
+</section>
+</body>
+<!------------------------------------------------------------------------------------->
+
+</html>

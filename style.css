@@ -1,267 +1,1561 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background-color: #f00;
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+}
+
+/*Barra de navegacion general*/
 .header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(59, 59, 59, 0.048), rgba(0, 1, 7, 0.7)), url(images/banner.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f00;
+  /* No estoy seguro de si querías mantener "none" aquí */
+  max-height: 15vh;
 }
 
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space space-between;
-    align-items: center;
+.header-mangas {
+  background-color: transparent;
 }
 
 nav img {
-    width: 150 px;
+  width: 150 px;
 }
 
 .nav-links {
-    flex: 1;
-    text-align: right;
+  text-align: right;
 }
 
 .nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
 }
 
 .nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  position: right;
 }
 
 .nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.4s;
 }
 
 .nav-links ul li:hover::after {
-    width: 100%;
-
+  width: 100%;
 }
 
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----hamburguer menu-----*/
 
-.text-box h1 {
-    font-size: 62px;
-
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-
-}
-
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-
-
-}
-
-.hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
+.menuHamburguesa {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 3;
 }
 
 nav .fa {
+  display: block;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cerrar-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  z-index: 2;
+}
+
+.cerrar-menu i:hover {
+  color: #f00;
+}
+
+/* Botón para abrir el navlist con el icono de menú hamburguesa */
+.boton-nav {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  background: none;
+  border: none;
+  z-index: 3;
+  /* Asegura que el botón esté por encima de otros elementos */
+}
+
+@media (max-width: 700px) {
+  .boton-nav {
+    display: block;
+    /* Asegura que el botón esté siempre visible en dispositivos móviles */
+  }
+
+  .nav-links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.349);
+    backdrop-filter: blur(2rem);
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    z-index: 2;
     display: none;
+    flex-direction: column;
+    align-items: end;
+    padding: 1rem;
+    line-height: 0.9;
+    text-decoration: none;
+  }
+
 }
 
-@media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Index-Home*/
 
-    }
+/*Titulo y imagen N1 GOKU*/
 
-    .nav-links ul li {
-        display: block;
-    }
-
-    /* sidebar */
-    .nav-links {
-        position: absolute;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-    }
-
-    /* icons hidden sidebar */
-    nav.fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-
-
-    }
-
-    .nav-links ul {
-        padding: 30px;
-
-    }
+#dragonballintro {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
 }
 
-/*----titulo numero 2 y articulos---*/
-.titulo2 {
-    width: 80%;
-    margin: auto;
+#dragonballintro {
+  padding: 0 19%;
+}
+
+.hero-text h5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 130px;
+  line-height: 1;
+  color: #fff;
+  margin: 0 0 45px;
+}
+
+.hero-text h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+@media (max-width: 1460px) {
+  #dragonballintro {
+    padding: 0 12%;
+  }
+
+  #dragonballintro  {
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 1340px */
+  .hero-img img {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas más pequeñas */
+    height: auto;
+  }
+}
+
+.hero-text h1 {
+  font-size: 140px;
+  margin: 0 0 30px;
+}
+
+.hero-text h5 {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1195px) {
+  #dragonballintro {
+    padding: 0 3%;
+  }
+
+  #dragonballintro  {
+    padding: 0 3%;
+    transition: .2s;
+  }
+
+  .hero-text {
+    padding-top: 115px;
+  }
+
+  .hero-img {
     text-align: center;
-    padding-top: 100px;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 90px;
+    /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    margin: 0 0 30px;
+  }
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: 600;
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N2 PERSONAJES*/
+
+#dragonballintro2 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
 }
 
-p {
-    color: #000000;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
-    padding: 10px;
+.hero2-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
 
+.hero2-img {
+  text-align: center;
+  /* Alinea el contenido al centro en lugar de a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+#dragonballintro2 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text2 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#dragonballintro2 h4 {
+  color: #fff;
+  text-align: left;
+}
+
+#dragonballintro2 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro2 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero2-img img {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N3 ESFERAS*/
+
+#dragonballintro3 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero3-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+.hero3-img {
+  text-align: right;
+  /* Alinea el contenido a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.animated-image3 {
+  width: 100%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+#dragonballintro3 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text3 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#dragonballintro3 h4 {
+  color: #fff;
+  text-align: left;
+}
+
+#dragonballintro3 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro3 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero3-img img,
+  .animated-image3 {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Titulo y imagen N4 PAN*/
+
+#dragonballintro4 {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero4-img img {
+  max-width: 100%;
+  /* Ajusta el ancho máximo en función del tamaño de pantalla */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+.hero4-img {
+  text-align: right;
+  /* Alinea el contenido a la derecha */
+  max-width: 100%;
+  /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.animated-image4 {
+  width: 100%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto;
+  /* Asegura que la altura se ajuste automáticamente según el ancho */
+}
+
+#dragonballintro4 {
+  padding: 0 5%;
+  /* Reduce el padding para adaptarse mejor a pantallas más pequeñas */
+}
+
+.hero-text4 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#dragonballintro3 h4 {
+  color: #fff;
+  text-align: left;
+}
+
+#dragonballintro4 p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Estilos específicos para pantallas con un ancho máximo de 768px */
+  #dragonballintro4 {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna en pantallas pequeñas */
+    padding: 0 10px;
+    /* Reduce el padding aún más para pantallas más pequeñas */
+  }
+
+  .hero4-img img,
+  .animated-image3 {
+    width: 100%;
+    /* Ajusta el ancho al 100% en pantallas pequeñas */
+    height: auto;
+  }
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------Imagenes de los planetas dentro de el recuadro--------------------*/
+
+.imagen-recuadro1 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro1 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+/*------------------------*/
+
+.imagen-recuadro2 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro2 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+/*------------------------*/
+
+.imagen-recuadro3 {
+  border: none;
+  /* Añade un borde alrededor del recuadro */
+  padding: 0px;
+  /* Espacio alrededor de la imagen */
+  width: 300px;
+  /* Ancho deseado del recuadro */
+  margin: 0 auto;
+  /* Centra el recuadro en el centro del contenedor */
+}
+
+.imagen-recuadro3 img {
+  max-width: 100%;
+  /* Asegura que la imagen se ajuste al ancho del recuadro */
+  max-height: 100%;
+  /* Asegura que la imagen se ajuste a la altura del recuadro */
+}
+
+/*------------Mapa google-------------*/
+.location {
+  color: #fff;
+}
+
+/*-----------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  /* sidebar */
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/*----titulo numero 2 y articulos en el INDEX Home---*/
+
+
+#textosindex {
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.titulo2 h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.titulo2 {
+  width: 80%;
+  padding-top: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 5%;
+  display: flex;
+  justify-content:center;
+ 
 }
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en pantallas más pequeñas */
+    align-items: center; /* Centra los elementos horizontalmente en pantallas más pequeñas */
+  }
+}
+
+
 
 .titulo2-col {
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+  flex-basis: 90%;
+  background-color: #970909;
+  border-radius: 30px;
+  margin-bottom: 5%;
+  padding: 20px 20px;
+  margin: 10px 5px;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
-h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
 
+.titulo2 h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 /*sombras de recuadros articulos*/
 .titulo2-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 /*visualizacion de reacuadros articulos en pantalla pequeña*/
 @media (max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
+  .row {
+    flex-direction: column;
+  }
 }
 
-/*ABOUT: acerca de nuestra empresa*/
+/*ABOUT: acerca del blog*/
 .ABOUT {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-}
-
-ABOUT-col {
-
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-
-}
-
-ABOUT-col img {
-    width: 100%;
-
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  color: #fff;
 }
 
 .location {
-width: 80%;
-margin: auto;
-text-align: center;
-padding-top: 50px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
 
+
+/*-------medidas para visualizar el sitio en diferentes dispositivos-----------*/
+#visualizaciondispositivos {
+  /* Estilos para pantallas con un ancho mínimo de 1281px (hi-res laptops y desktops) */
+  @media (min-width: 1281px) {
+    /* Agrega tus estilos específicos para pantallas de 1281px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 1025px (big landscape tablets, laptops, and desktops) */
+  @media (min-width: 1025px) {
+    /* Agrega tus estilos específicos para pantallas de 1025px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 961px (tablet, landscape iPad, lo-res laptops and desktops) */
+  @media (min-width: 961px) {
+    /* Agrega tus estilos específicos para pantallas de 961px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 641px (portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones) */
+  @media (min-width: 641px) {
+    /* Agrega tus estilos específicos para pantallas de 641px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 481px (portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide) */
+  @media (min-width: 481px) {
+    /* Agrega tus estilos específicos para pantallas de 481px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 320px (smartphones, iPhone, portrait 480x320 phones) */
+  @media (min-width: 320px) {
+    /* Agrega tus estilos específicos para pantallas de 320px o más */
+  }
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*Seccion (2) Op&End - Mariano*/
+
+.Container_general {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  background-color: none;
+  background-image: url('images/namek1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100%; /* Asegura que no exceda el ancho de la ventana */
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .Container_general {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas más pequeñas */
+  }
+}
+
+
+.Fondo {
+  background-image: none;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+body p {
+  color: #fff;
+}
+
+strong {
+  color: #fff;
+}
+
+.Sumario_Opening {
+  padding: 15px; /* Reducción de relleno para simplificar el código */
+  border: 1px solid rgba(255, 0, 0, 0.685);
+  width: 330px;
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  /* Ajuste el tamaño de fuente o cualquier otro estilo según sus necesidades */
+  font-size: 16px;
+}
+
+/* Media query para ajustar el estilo en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .Sumario_Opening {
+    font-size: 14px; /* Ejemplo de reducción de tamaño de fuente */
+  }
+}
+
+
+
+.Titulo_Lista {
+  text-align: left;
+}
+
+.Tabla_Opening_Ending,
+tr,
+th,
+td {
+  border-style:dotted;
+  border-color: rgba(255, 0, 0, 0.685);
+  border-collapse: collapse;
+  border-width: 0.1px;
+  /* Ajusta el grosor según tus necesidades */
+  line-height: 1.5;
+}
+
+/* Hacer la tabla responsive */
+@media (max-width: 768px) {
+  /* Cambia el formato de la tabla en pantallas pequeñas */
+  .Tabla_Opening_Ending {
+    display: block;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre las filas */
+  }
+
+  th, td {
+    display: block;
+    text-align: left; /* Cambia la alineación del texto */
+  }
+}
+
+/* Otras reglas de estilo para pantallas más grandes si es necesario */
+@media (min-width: 769px) {
+  /* Agrega reglas de estilo adicionales para pantallas más grandes */
+}
+
+
+.Canciones_Ending {
+  border-top: none;
+}
+
+.Sumario_Ending {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border: 2px solid rgba(255, 0, 0, 0.685);
+  width: 330px;
+  list-style: none;
+  color: #fff;
+}
+
+.Descripcion_cancion {
+  text-align: left;
+  color: white;
+}
+
+
+/*Seccion (2) imagenes*/
+
+.goku3 {
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+  animation: moveUpDown 2s infinite;
+  /* Aplica la animación 'moveUpDown' durante 2 segundos de forma infinita */
+}
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Mueve la imagen hacia arriba 20px */
+  }
+}
+
+
+.trunks {
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
 
 }
 
 
+.kaioshin {
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+
+}
+
+.frieza {
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+
+}
+
+
+.video-container {
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  position: relative;
+}
+
+
+.video-responsive {
+  max-width: 100%;
+
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Seccion (3) Mangas*/
+
+@font-face {
+  font-family: dragonball;
+  src: url(fuentes/Saiyan-Sans.ttf);
+}
+
+#mangas {
+  /*Body*/
+  background-image: url(images/kamehouse.webp);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#mangas main {
+  padding-bottom: 2rem;
+}
+
+/*Titulo Mangas*/
+#mangas section h2 {
+  text-align: center;
+  color: #fa0011;
+  font-size: 4rem;
+  font-family: dragonball;
+  font-weight: 400;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin: 5rem auto;
+}
+
+#mangas section h2 span {
+  text-align: center;
+  font-family: dragonball;
+  color: #550000;
+}
+
+#mangas section h2 .o {
+  text-align: center;
+  font-family: dragonball;
+  color: #f3e603;
+}
+
+#mangas .dragon,
+#mangas .ball {
+  text-align: center;
+  font-family: dragonball;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+}
+
+#mangas .dragon {
+  text-align: center;
+  color: #ffa500;
+}
+
+#mangas .ball {
+  text-align: center;
+  color: #ff0000;
+}
+
+/*Carrusel*/
+#mangas__carrusel,
+#mangas__carrusel-z,
+#mangas__carrusel-super {
+  width: 100%;
+}
+
+/*Imagenes*/
+.mangas__caja-lista {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 447px;
+  padding: 10px 0;
+  margin: 0 auto;
+  max-width: 89vw;
+  overflow: hidden;
+}
+
+.mangas__caja-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.mangas__caja {
+  position: relative;
+  width: 300px;
+  padding: 0 18px;
+  float: left;
+  display: flex;
+  height: 100%;
+  cursor: pointer;
+}
+
+.mangas__caja img {
+  object-fit: cover;
+  height: 447px;
+  width: 100%;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 5px 0 #0008;
+  transition: 0.3s ease-in-out;
+}
+
+.mangas__caja img:hover {
+  opacity: 0.85;
+}
+
+/*Overlay*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #555;
+  border-radius: 1.5rem;
+}
+
+.overlay.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Botones*/
+.mangas__caja-flecha {
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 #0002;
+  border: 0;
+  cursor: pointer;
+}
+
+.mangas__caja-flecha:focus {
+  outline: 0;
+}
+
+.mangas__caja-flecha i {
+  width: 12px;
+  color: #000b;
+}
+
+#mangas__bonton-ant,
+#mangas__bonton-antz,
+#mangas__bonton-ant-super {
+  left: 0px;
+}
+
+#mangas__bonton-sig,
+#mangas__bonton-sigz,
+#mangas__bonton-sig-super {
+  right: 0px;
+}
+
+#footer-mangas {
+  height: 15rem;
+  background-color: #fa4;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /*Carrusel*/
+  .mangas__caja {
+    width: 340px;
+  }
+}
+
+/*Celular*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+  /*Carrusel*/
+  .mangas__caja {
+    width: 450px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Seccion (4) Personajes - Luis*/
+/*Fondo*/
+#personajes {
+  background-image: url(images/fondo-personajes.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+/*Navbar*/
+#personajes .header {
+  background-color: #aaa6;
+}
+
+#personajes-header {
+  height: 70vh;
+}
+
+#personajes-header div {
+  margin: 20vh auto;
+}
+
+/*Titulo*/
+#personajes-header h1 {
+  font-family: dragonball;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+#personajes-header .dragon {
+  font-family: dragonball;
+  color: #ffa500;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+#personajes-header .ball {
+  font-family: dragonball;
+  color: #ff0000;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+/*Header*/
+#personajes-ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  margin: auto;
+  list-style: none;
+  height: 3rem;
+  background-color: #aaaa;
+}
+
+#personajes-ul li {
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+#personajes-ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 700;
+}
+
+#menuSelect {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #222;
+  font-weight: 700;
+  text-align: center;
+}
+
+#menuSelect:hover {
+  cursor: pointer;
+}
+
+#menuSelect option {
+  background-color: #aaa6;
+  color: #222;
+  font-weight: 700;
+  border: none;
+}
+
+/*Linea divisoria*/
+#personajes-main hr {
+  height: 1rem;
+  width: 80%;
+  margin: auto;
+  border: none;
+  background: repeating-linear-gradient(90deg, #ffa500, #ff0000);
+  border: 3px solid #fff8;
+  border-radius: 0.8rem;
+}
+
+/*Imagenes Dragon Ball*/
+/*H2*/
+.personajes__imagenes-h2 {
+  text-align: center;
+  font-weight: 100;
+  margin: 2rem auto;
+}
+
+.personajes__imagenes-h2 .dragon {
+  font-family: dragonball;
+  color: #ffa500;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 6px;
+  font-size: 7rem;
+}
+
+.personajes__imagenes-h2 .ball {
+  font-family: dragonball;
+  color: #ff0000;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 6px;
+  font-size: 7rem;
+}
+
+/*H3*/
+.personajes__imagenes-h3 {
+  text-align: center;
+  font-weight: 100;
+  margin: 2rem;
+}
+
+.personajes__imagenes-h3 .dragon {
+  font-family: dragonball;
+  color: #ffa500;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+.personajes__imagenes-h3 .ball {
+  font-family: dragonball;
+  color: #ff0000;
+  -webkit-text-stroke: 3px #000;
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+.personajes__cont {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 90vw;
+  height: 500px;
+  font-family: dragonball;
+  transition: all 400ms;
+  margin: 5rem auto;
+}
+
+.personajes__contNueve {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.personajes__contCinco {
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+}
+
+.personajes__cont-box {
+  position: relative;
+  background: var(--img) center center;
+  background-size: cover;
+  transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 0.8rem;
+  background-position: center top;
+}
+
+.personajes__cont-box::after {
+  content: attr(data-txt);
+  font-family: dragonball;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
+  text-align: center;
+}
+
+.personajes__cont:hover .personajes__cont-box {
+  filter: grayscale(100%) opacity(24%);
+}
+
+.personajes__cont-box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+.personajes__cont .personajes__cont-box:hover {
+  filter: grayscale(0%) opacity(100%);
+  cursor: pointer;
+}
+
+.personajes__cont-box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+
+.personajes__cont-box:nth-child(even) {
+  transform: translateY(16px);
+}
+
+/*Tablet*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /*Imagenes Dragon Ball*/
+  .personajes__cont {
+    gap: 0.5rem;
+    margin: 2rem auto;
+  }
+
+  .personajes__imagenes-h2-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*Celular*/
+@media only screen and (max-width: 768px) {
+
+  /*Header*/
+  #personajes-ul {
+    width: 100%;
+  }
+
+  #personajes-ul li,
+  #menuSelect,
+  #menuSelect option {
+    font-size: 1rem;
+  }
+
+  /*Imagenes Dragon Ball*/
+  .personajes__cont {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
+    height: calc(1000px + 2rem);
+  }
+
+  .personajes__contNueve {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px 500px;
+    height: calc(1500px + 3rem);
+  }
+
+  .personajes__contCinco {
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    height: 500px;
+  }
+
+  .personajes__imagenes-h2-cell .dragon,
+  .personajes__imagenes-h2-cell .ball {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .personajes__imagenes-h2-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Seccion (5) Formulario - Gonzalo*/
+
+#formulario {
+  background-image: url('images/fondoformulario2.jpg');
+  /* Reemplaza 'ruta/de/la/imagen.jpg' con la URL o la ruta de tu imagen */
+  background-color: red;
+  /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#formulario nav {
+  background: none;
+}
+
+form {
+  background: #14141471;
+  /*-----centrar formulario de contacto-----*/
+  inset: 0;
+  margin: auto;
+  /*-------------------------*/
+  display: flex;
+  flex-direction: column;
+  padding: 9vw 4vw;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 30px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form h3 {
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 10px;
+  outline: none;
+  max-width: 500px;
+  min-width: min-content;
+  max-height: 250px;
+  min-height: 50px;
+  background: #dadada;
+  font-size: 16px;
+  display: flex;
+}
+
+form button {
+  padding: 15px;
+  background: #ff0116;
+  color: #fff;
+  font-size: 18;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
 
 /*-----footer------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
 }
 
-.footer h4{
-margin-bottom: 25px;
-margin-top: 20px;
-font-weight: 600;
-
-
+.footer h4 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: white;
 }
 
-.icons .fa{
-color:#f44336;
-margin: 0 13px;
-cursor: pointer;
-padding: 18px 0;
-
-
+.icons .fa {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
 }
 
 
-
+/* Agrega el efecto hover a los íconos cuando el mouse pasa sobre ellos */
+.icons iconify-icon:hover {
+  filter: brightness(2); /* Cambia el brillo cuando el mouse pasa por encima */
+  transition: filter 0.3s; /* Agrega una transición suave */
+}

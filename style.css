@@ -1285,7 +1285,7 @@ td {
 .personajes__imagenes-h2 {
   text-align: center;
   font-weight: 100;
-  margin: 2rem;
+  margin: 2rem auto;
 }
 
 .personajes__imagenes-h2 .dragon {

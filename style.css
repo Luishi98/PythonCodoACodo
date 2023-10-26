@@ -208,6 +208,10 @@ nav .fa {
 }
 
 @media (max-width: 1460px) {
+  #dragonballintro {
+    padding: 0 12%;
+  }
+
   section {
     padding: 0 12%;
     transition: .2s;
@@ -215,6 +219,7 @@ nav .fa {
 }
 
 @media (max-width: 1340px) {
+
   /* Estilos específicos para pantallas con un ancho máximo de 1340px */
   .hero-img img {
     width: 100%;
@@ -233,6 +238,10 @@ nav .fa {
 }
 
 @media (max-width: 1195px) {
+  #dragonballintro {
+    padding: 0 3%;
+  }
+
   section {
     padding: 0 3%;
     transition: .2s;
@@ -381,12 +390,12 @@ nav .fa {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
-  color: white;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 #dragonballintro3 h4 {
-  color: white;
+  color: #fff;
   text-align: left;
 }
 
@@ -459,12 +468,12 @@ nav .fa {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
-  color: white;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 #dragonballintro3 h4 {
-  color: white;
+  color: #fff;
   text-align: left;
 }
 
@@ -489,6 +498,9 @@ nav .fa {
     height: auto;
   }
 }
+
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*---------------Imagenes de los planetas dentro de el recuadro--------------------*/
@@ -553,8 +565,9 @@ nav .fa {
 
 /*------------Mapa google-------------*/
 .location {
-color: #fff;
+  color: #fff;
 }
+
 /*-----------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -620,42 +633,62 @@ nav .fa {
   }
 }
 
-/*----titulo numero 2 y articulos---*/
-.titulo2 {
-  margin: auto;
-  text-align: center;
-  padding-top: 100px;
-  color: #fff;
+/*----titulo numero 2 y articulos en el INDEX Home---*/
+
+
+#textosindex {
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .titulo2 h1 {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 600;
 }
 
-.titulo2 p {
+.titulo2 {
+  width: 80%;
+  padding-top: 50px;
   color: #fff;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   padding: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .row {
   margin-top: 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
+ 
 }
 
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna en pantallas más pequeñas */
+    align-items: center; /* Centra los elementos horizontalmente en pantallas más pequeñas */
+  }
+}
+
+
+
 .titulo2-col {
-  flex-basis: 31%;
+  flex-basis: 90%;
   background-color: #970909;
-  border-radius: 10px;
+  border-radius: 30px;
   margin-bottom: 5%;
-  padding: 20px 12px;
+  padding: 20px 20px;
+  margin: 10px 5px;
   box-sizing: border-box;
   transition: 0.5s;
 }
+
 
 .titulo2 h3 {
   text-align: center;
@@ -691,6 +724,44 @@ nav .fa {
   padding-top: 50px;
 }
 
+
+/*-------medidas para visualizar el sitio en diferentes dispositivos-----------*/
+#visualizaciondispositivos {
+  /* Estilos para pantallas con un ancho mínimo de 1281px (hi-res laptops y desktops) */
+  @media (min-width: 1281px) {
+    /* Agrega tus estilos específicos para pantallas de 1281px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 1025px (big landscape tablets, laptops, and desktops) */
+  @media (min-width: 1025px) {
+    /* Agrega tus estilos específicos para pantallas de 1025px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 961px (tablet, landscape iPad, lo-res laptops and desktops) */
+  @media (min-width: 961px) {
+    /* Agrega tus estilos específicos para pantallas de 961px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 641px (portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones) */
+  @media (min-width: 641px) {
+    /* Agrega tus estilos específicos para pantallas de 641px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 481px (portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide) */
+  @media (min-width: 481px) {
+    /* Agrega tus estilos específicos para pantallas de 481px o más */
+  }
+
+  /* Estilos para pantallas con un ancho mínimo de 320px (smartphones, iPhone, portrait 480x320 phones) */
+  @media (min-width: 320px) {
+    /* Agrega tus estilos específicos para pantallas de 320px o más */
+  }
+}
+
+
+
+
+
 /*-----------------------------------------------------------------------------------------------------*/
 /*Seccion (2) Op&End - Mariano*/
 
@@ -699,33 +770,23 @@ nav .fa {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: stretch;
-  margin-left: -80px;
-  background-color: #181616;
-  background-image: url('images/namek1.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la URL de tu imagen de fondo */
-  background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-attachment: fixed; /* Fija la imagen de fondo en su posición */
+  background-color: none;
+  background-image: url('images/namek1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100%; /* Asegura que no exceda el ancho de la ventana */
+  padding: 20px;
 }
 
-@media (max-width: 200px) {
+
+@media (max-width: 768px) {
   .Container_general {
-    flex-direction:column; /* Cambia la dirección a columna en pantallas más pequeñas */
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas más pequeñas */
   }
 }
 
-.Container_Music {
-  margin: 10px 250px 0 50px;
-  background-color: none;
-  padding: 0 50px 50px;
-}
-
-.Server_Discord {
-  background-color: none;
-  margin-right: 40px;
-  margin-top: 10px;
-  width: 1000px;
-  height: 250px;
-}
 
 .Fondo {
   background-image: none;
@@ -741,18 +802,31 @@ body p {
 }
 
 strong {
-  color: white;
+  color: #fff;
 }
 
 .Sumario_Opening {
+  padding: 15px; /* Reducción de relleno para simplificar el código */
+  border: 1px solid rgba(255, 0, 0, 0.685);
+  width: 330px;
+  color: #fff;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 1px solid rgba(255, 0, 0, 0.685);
-  width: 380px;
-  color: #fff;
+
+  /* Ajuste el tamaño de fuente o cualquier otro estilo según sus necesidades */
+  font-size: 16px;
 }
+
+/* Media query para ajustar el estilo en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .Sumario_Opening {
+    font-size: 14px; /* Ejemplo de reducción de tamaño de fuente */
+  }
+}
+
+
 
 .Titulo_Lista {
   text-align: left;
@@ -762,12 +836,37 @@ strong {
 tr,
 th,
 td {
-  border-style: solid;
+  border-style:dotted;
   border-color: rgba(255, 0, 0, 0.685);
   border-collapse: collapse;
-  border-width: 1px; /* Ajusta el grosor según tus necesidades */
-  line-height: 2;
+  border-width: 0.1px;
+  /* Ajusta el grosor según tus necesidades */
+  line-height: 1.5;
 }
+
+/* Hacer la tabla responsive */
+@media (max-width: 768px) {
+  /* Cambia el formato de la tabla en pantallas pequeñas */
+  .Tabla_Opening_Ending {
+    display: block;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre las filas */
+  }
+
+  th, td {
+    display: block;
+    text-align: left; /* Cambia la alineación del texto */
+  }
+}
+
+/* Otras reglas de estilo para pantallas más grandes si es necesario */
+@media (min-width: 769px) {
+  /* Agrega reglas de estilo adicionales para pantallas más grandes */
+}
+
 
 .Canciones_Ending {
   border-top: none;
@@ -779,7 +878,7 @@ td {
   padding-top: 15px;
   padding-bottom: 30px;
   border: 2px solid rgba(255, 0, 0, 0.685);
-  width: 380px;
+  width: 330px;
   list-style: none;
   color: #fff;
 }
@@ -789,69 +888,84 @@ td {
   color: white;
 }
 
-/* recuadro eliminado 
-.Titulo_Discord h2 {
-  background-color: orange;
-  color: black;
-  padding-bottom: 50px;
-}
-*/
 
 /*Seccion (2) imagenes*/
 
 .goku3 {
-  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  display: block; /* Evita espacios no deseados debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-  animation: moveUpDown 2s infinite; /* Aplica la animación 'moveUpDown' durante 2 segundos de forma infinita */
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+  animation: moveUpDown 2s infinite;
+  /* Aplica la animación 'moveUpDown' durante 2 segundos de forma infinita */
 }
 
 @keyframes moveUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-20px); /* Mueve la imagen hacia arriba 20px */
+    transform: translateY(-20px);
+    /* Mueve la imagen hacia arriba 20px */
   }
 }
 
 
 .trunks {
-  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  display: block; /* Evita espacios no deseados debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-  
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+
 }
 
 
 .kaioshin {
-  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  display: block; /* Evita espacios no deseados debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
- 
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+
 }
 
 .frieza {
-  max-width: 65%; /* La imagen no superará el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  display: block; /* Evita espacios no deseados debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
- 
+  max-width: 65%;
+  /* La imagen no superará el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la proporción de aspecto de la imagen */
+  display: block;
+  /* Evita espacios no deseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+
 }
 
 
 .video-container {
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
   position: relative;
 }
 
 
 .video-responsive {
   max-width: 100%;
-  
+
 }
 
 
@@ -1048,6 +1162,7 @@ td {
 
 /*Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
   /*Carrusel*/
   .mangas__caja {
     width: 340px;
@@ -1056,6 +1171,7 @@ td {
 
 /*Celular*/
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+
   /*Carrusel*/
   .mangas__caja {
     width: 450px;
@@ -1072,6 +1188,7 @@ td {
   background-attachment: fixed;
   background-position: bottom;
 }
+
 /*Navbar*/
 #personajes .header {
   background-color: #aaa6;
@@ -1186,6 +1303,7 @@ td {
   letter-spacing: 6px;
   font-size: 7rem;
 }
+
 /*H3*/
 .personajes__imagenes-h3 {
   text-align: center;
@@ -1284,6 +1402,7 @@ td {
 
 /*Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
   /*Imagenes Dragon Ball*/
   .personajes__cont {
     gap: 0.5rem;
@@ -1300,12 +1419,15 @@ td {
 
 /*Celular*/
 @media only screen and (max-width: 768px) {
+
   /*Header*/
   #personajes-ul {
     width: 100%;
   }
 
-  #personajes-ul li, #menuSelect, #menuSelect option {
+  #personajes-ul li,
+  #menuSelect,
+  #menuSelect option {
     font-size: 1rem;
   }
 
@@ -1346,8 +1468,10 @@ td {
 /*Seccion (5) Formulario - Gonzalo*/
 
 #formulario {
-  background-image: url('images/fondoformulario2.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la URL o la ruta de tu imagen */
-  background-color: red; /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
+  background-image: url('images/fondoformulario2.jpg');
+  /* Reemplaza 'ruta/de/la/imagen.jpg' con la URL o la ruta de tu imagen */
+  background-color: red;
+  /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1428,4 +1552,11 @@ form button {
   margin: 0 13px;
   cursor: pointer;
   padding: 18px 0;
+}
+
+
+/* Agrega el efecto hover a los íconos cuando el mouse pasa sobre ellos */
+.icons iconify-icon:hover {
+  filter: brightness(2); /* Cambia el brillo cuando el mouse pasa por encima */
+  transition: filter 0.3s; /* Agrega una transición suave */
 }

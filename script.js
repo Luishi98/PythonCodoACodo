@@ -1,3 +1,50 @@
+
+/*----------------------- Codigo Javascript formulario----------------------->*/
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
+
+  form.addEventListener("submit", function (event) {
+    let valid = true;
+
+    // Validar el nombre (solo letras y espacios)
+    if (!/^[A-Za-z\s]+$/.test(nameInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese un nombre válido sin números.");
+      nameInput.focus();
+    }
+
+    // Validar el correo electrónico (formato de correo electrónico válido)
+    if (!/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese una dirección de correo electrónico válida.");
+      emailInput.focus();
+    }
+
+
+    // Validar el número de teléfono (solo dígitos)
+    if (!/^\d+$/.test(phoneInput.value)) {
+      valid = false;
+      alert("Por favor, ingrese un número de teléfono válido.");
+      phoneInput.focus();
+    }
+
+    // Validar campos requeridos
+    if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || phoneInput.value.trim() === '') {
+      valid = false;
+      alert("Todos los campos son requeridos.");
+    }
+
+    if (!valid) {
+      event.preventDefault(); // Evitar el envío del formulario si hay errores
+    }
+  });
+});
+
+
 /* Barra navegación*/
 document.addEventListener("DOMContentLoaded", function () {
   const abrirNavlist = document.getElementById("abrir-nav-links");
@@ -271,3 +318,5 @@ function restaurarPersonajes(tanda) {
     }
   }
 }
+
+

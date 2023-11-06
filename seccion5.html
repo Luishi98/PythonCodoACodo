@@ -26,13 +26,12 @@
 
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-
+  <title>Contacto</title>
 </head>
 
-<section id="visualizaciondispositivos">
 
   <body id="formulario">
-    <title>Contacto</title>
+    
     <nav class="header">
       <a href="index.html"><img src="images/logodragonball.png" /> </a>
       <div class="nav-links" id="navlinks">
@@ -61,13 +60,14 @@
       <div class="container">
         <form action="https://formsubmit.co/dragonballzblog2023@gmail.com" method="POST" id="contact-form">
           <h3> Contacto </h3>
-          <input type="text" name="name" id="name" placeholder="Tu nombre" required>
-          <input type="email" name="email" id="email" placeholder="Casilla de correo" required>
-          <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" required>
-          <textarea name="message" id="message" rows="4" placeholder="¿Cómo te puedo ayudar?" required></textarea>
+          <input type="text" name="name" id="name" placeholder="Tu nombre">
+          <input type="email" name="email" id="email" placeholder="Casilla de correo">
+          <input type="tel" name="phone" id="phone" placeholder="Número de teléfono">
+          <textarea name="message" id="message" rows="4" placeholder="¿Cómo te puedo ayudar?"></textarea>
           <button type="submit">Enviar</button>
         </form>
       </div>
+      
     </section>
 
     <!--footer-->
@@ -102,9 +102,52 @@
 
 
 
-    <!----------------------- Codigo Javascript----------------------->
-    <script src="script.js"></script>
-</section>
+    <!----------------------- Codigo Javascript formulario----------------------->
+    <script> document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-form");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const phoneInput = document.getElementById("phone");
+      const messageInput = document.getElementById("message");
+    
+      form.addEventListener("submit", function (event) {
+        let valid = true;
+    
+        // Validar el nombre (solo letras y espacios)
+        if (!/^[A-Za-z\s]+$/.test(nameInput.value)) {
+          valid = false;
+          alert("Por favor, ingrese un nombre válido sin números.");
+          nameInput.focus();
+        }
+    
+        // Validar el correo electrónico (formato de correo electrónico válido)
+        if (!/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+          valid = false;
+          alert("Por favor, ingrese una dirección de correo electrónico válida.");
+          emailInput.focus();
+        }
+    
+
+        // Validar el número de teléfono (solo dígitos)
+        if (!/^\d+$/.test(phoneInput.value)) {
+          valid = false;
+          alert("Por favor, ingrese un número de teléfono válido.");
+          phoneInput.focus();
+        }
+    
+        // Validar campos requeridos
+        if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || phoneInput.value.trim() === '') {
+          valid = false;
+          alert("Todos los campos son requeridos.");
+        }
+    
+        if (!valid) {
+          event.preventDefault(); // Evitar el envío del formulario si hay errores
+        }
+      });
+    });
+    </script>
+
 </body>
 <!------------------------------------------------------------------------------------->
 
